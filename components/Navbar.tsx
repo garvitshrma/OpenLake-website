@@ -9,6 +9,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const about = [
   { label: "Philosophy", href: "/philosophy" },
   { label: "Community", href: "/team" },
+  { label: "Newsletter", href: "/team" },
 ];
 
 const resources = [
@@ -25,7 +26,7 @@ const links = [
   { label: "Projects", href: "/programs" },
   // { label: "Clubs", href: "/clubs" },
   { label: "Events", href: "https://hackathons.hackclub.com" },
-  { label: "Resources", dropdown: resources },
+  { label: "Domains", dropdown: resources },
   { label: "Donate", href: "/philanthropy" },
 ];
 

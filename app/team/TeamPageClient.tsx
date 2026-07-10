@@ -71,7 +71,9 @@ function emailHref(email?: string) {
     return null;
   }
 
-  return email.includes("@") ? `mailto:${email}` : `mailto:${email}@hackclub.com`;
+  return email.includes("@")
+    ? `mailto:${email}`
+    : `mailto:${email}@hackclub.com`;
 }
 
 function BoardCard({
@@ -111,14 +113,23 @@ function BoardCard({
       {subrole && <p className="board-card__subrole">{subrole}</p>}
       {bio && <p className="board-card__bio">{bio}</p>}
       {mailHref && (
-        <a href={mailHref} className="board-card__pill" onClick={(e) => e.stopPropagation()}>
+        <a
+          href={mailHref}
+          className="board-card__pill"
+          onClick={(e) => e.stopPropagation()}
+        >
           {email!.includes("@") ? email : `${email}@hackclub.com`}
         </a>
       )}
     </article>
   );
   return href ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="board-card-anchor">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="board-card-anchor"
+    >
       {card}
     </a>
   ) : (
@@ -126,7 +137,13 @@ function BoardCard({
   );
 }
 
-function PersonCard({ member, onClick }: { member: TeamMember; onClick: () => void }) {
+function PersonCard({
+  member,
+  onClick,
+}: {
+  member: TeamMember;
+  onClick: () => void;
+}) {
   return (
     <button
       type="button"
@@ -259,9 +276,9 @@ export default function TeamPageClient({
               for teenagers.
             </h1>
             <p className="team-hero__lede">
-              Hack Club runs on a mix of staff, gap years, and teen contributors building programs,
-              infrastructure, community rituals, and helping with the day-to-day magic behind the
-              scenes.
+              Hack Club runs on a mix of staff, gap years, and teen contributors
+              building programs, infrastructure, community rituals, and helping
+              with the day-to-day magic behind the scenes.
             </p>
           </div>
         </div>
@@ -278,7 +295,22 @@ export default function TeamPageClient({
 
       <section className="team-shell board-section">
         <div className="board-section__inner">
-          <h2 className="board-section__title">Board &amp; Advisors</h2>
+          <h2 className="board-section__title">Secretary</h2>
+          <div className="board-grid board-grid--leaders">
+            <BoardCard
+              img="https://cdn.hackclub.com/019d8d79-96e5-7902-9e5b-1de299c1bdff/2026_04_14_0pu_Kleki%20(2).png"
+              name="Ashish Kumar Dash"
+              boardRole="Founder"
+              bio="Zach founded Hack Club after dropping out of high school to build software used by millions. He's been awarded the Thiel Fellowship and Forbes 30 Under 30."
+              email="zach"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="team-shell board-section">
+        <div className="board-section__inner">
+          <h2 className="board-section__title">Domain Leads</h2>
           <div className="board-grid board-grid--leaders">
             <BoardCard
               img="https://cdn.hackclub.com/019d8d79-96e5-7902-9e5b-1de299c1bdff/2026_04_14_0pu_Kleki%20(2).png"
@@ -321,13 +353,13 @@ export default function TeamPageClient({
         </div>
       </section>
 
-      <section className="team-shell team-section">
+      {/* <section className="team-shell team-section">
         <div className="team-section__header">
           <h2 className="team-section__title">Core teams</h2>
           <p className="team-section__copy">
-            HQ helps run the main Hack Club experience, while HCB keeps thousands of fiscally
-            sponsored non-profits running. Both are made up of staff, gap years, and teen
-            contributors.
+            HQ helps run the main Hack Club experience, while HCB keeps
+            thousands of fiscally sponsored non-profits running. Both are made
+            up of staff, gap years, and teen contributors.
           </p>
         </div>
 
@@ -349,21 +381,28 @@ export default function TeamPageClient({
             onMemberClick={setSelectedMember}
           />
         </div>
-      </section>
+      </section> */}
 
       <section className="team-shell team-section team-section--community">
         <div className="team-section__header">
           <p className="team-kicker team-kicker--dark">Community Teams</p>
-          <h2 className="team-section__title">The teen-facing crews shaping daily culture.</h2>
+          <h2 className="team-section__title">
+            The teen-facing crews shaping daily culture.
+          </h2>
           <p className="team-section__copy">
-            These teams are the visible edge of Hack Club: welcoming people in, moderating the
-            space, hosting events, and telling the story of what everyone is making together.
+            These teams are the visible edge of Hack Club: welcoming people in,
+            moderating the space, hosting events, and telling the story of what
+            everyone is making together.
           </p>
         </div>
 
         <div className="pod-grid">
           {communityPods.map((pod) => (
-            <CommunityPod key={pod.title} {...pod} onMemberClick={setSelectedMember} />
+            <CommunityPod
+              key={pod.title}
+              {...pod}
+              onMemberClick={setSelectedMember}
+            />
           ))}
         </div>
       </section>
@@ -384,7 +423,11 @@ export default function TeamPageClient({
             onClick={() => setSelectedMember(null)}
           />
           <div className="modal-content">
-            <button className="modal-close" type="button" onClick={() => setSelectedMember(null)}>
+            <button
+              className="modal-close"
+              type="button"
+              onClick={() => setSelectedMember(null)}
+            >
               ×
             </button>
             {selectedMember.avatar && (
@@ -400,10 +443,15 @@ export default function TeamPageClient({
               {selectedMember.name}
             </h3>
             <p className="modal-role">{selectedMember.role}</p>
-            {selectedMember.bio && <p className="modal-bio">{selectedMember.bio}</p>}
+            {selectedMember.bio && (
+              <p className="modal-bio">{selectedMember.bio}</p>
+            )}
             <div className="modal-links">
               {emailHref(selectedMember.email) && (
-                <a href={emailHref(selectedMember.email)!} className="modal-link">
+                <a
+                  href={emailHref(selectedMember.email)!}
+                  className="modal-link"
+                >
                   Email
                 </a>
               )}
