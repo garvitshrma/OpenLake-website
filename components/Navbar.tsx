@@ -8,27 +8,23 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const about = [
   { label: "Philosophy", href: "/philosophy" },
-  { label: "Philanthropy", href: "/philanthropy" },
-  { label: "Team & Board", href: "/team" },
-  { label: "Jobs", href: "/jobs" },
-  { label: "Branding Guide", href: "/brand" },
-  { label: "Press Inquiries", href: "/press" },
+  { label: "Community", href: "/team" },
 ];
 
 const resources = [
-  { label: "HCB Fiscal Sponsorship", href: "/fiscal-sponsorship" },
-  { label: "Hacker Toolbox", href: "https://toolbox.hackclub.com" },
-  { label: "Code of Conduct", href: "/conduct" },
-  { label: "Privacy & Terms", href: "/privacy-and-terms" },
-  { label: "Safety", href: "/safety" },
+  { label: "Web Development", href: "/fiscal-sponsorship" },
+  // { label: "Hacker Toolbox", href: "https://toolbox.hackclub.com" },
+  { label: "App Development", href: "/conduct" },
+  { label: "Game Development", href: "/privacy-and-terms" },
+  { label: "AI & ML", href: "/safety" },
 ];
 
 const links = [
   { label: "About", dropdown: about },
   // { label: "Projects", href: "/projects" },
-  { label: "Programs", href: "/programs" },
-  { label: "Clubs", href: "/clubs" },
-  { label: "Hackathons", href: "https://hackathons.hackclub.com" },
+  { label: "Projects", href: "/programs" },
+  // { label: "Clubs", href: "/clubs" },
+  { label: "Events", href: "https://hackathons.hackclub.com" },
   { label: "Resources", dropdown: resources },
   { label: "Donate", href: "/philanthropy" },
 ];
