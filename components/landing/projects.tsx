@@ -200,7 +200,7 @@ export async function ProjectsSection() {
             margin: 0,
           }}
         >
-          100,000 teens started exactly where you are. We&rsquo;re here to help you build your first
+          100,00 teens started exactly where you are. We&rsquo;re here to help you build your first
           crazy thing.
         </p>
       </div>
