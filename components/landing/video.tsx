@@ -135,7 +135,7 @@ export function VideoSection() {
                 backgroundClip: "text",
               }}
             >
-              you joined Hack Club:
+              you joined OpenLake:
             </span>
           </h2>
 
@@ -150,7 +150,7 @@ export function VideoSection() {
               marginBottom: 32,
             }}
           >
-            <YouTubeEmbed id="JkSquIVXXds" title="Hack Club introduction for high school teens" />
+            <YouTubeEmbed id="PVD1LNDxOnc" title="Hack Club introduction for high school teens" />
           </div>
 
           {/* Email signup */}

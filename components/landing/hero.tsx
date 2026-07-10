@@ -833,7 +833,7 @@ export function HeroSection() {
         </div>
 
         {/* Italic subtext */}
-        <p
+        {/* <p
           style={{
             fontFamily: "var(--font-phantom)",
             fontStyle: "italic",
@@ -875,7 +875,7 @@ export function HeroSection() {
           >
             terms.
           </Link>
-        </p>
+        </p> */}
 
         {/* Free stickers envelope */}
         <div
