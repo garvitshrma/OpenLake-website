@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "Hack Club";
-export const SITE_TITLE = "Hack Club — Where teens make cool stuff.";
+export const SITE_TITLE = "OpenLake";
 export const SITE_DESCRIPTION =
   "Hack Club is the world's largest nonprofit movement of teenagers making cool projects.";
 export const SITE_URL = "https://hackclub.com";
