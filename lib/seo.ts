@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const SITE_NAME = "Hack Club";
 export const SITE_TITLE = "OpenLake";
 export const SITE_DESCRIPTION =
-  "Hack Club is the world's largest nonprofit movement of teenagers making cool projects.";
+  "Build. Learn. Contribute. OpenLake is IIT Bhilai's hub for open-source innovation and collaborative development.";
 export const SITE_URL = "https://hackclub.com";
 
 type PageMetadataInput = {

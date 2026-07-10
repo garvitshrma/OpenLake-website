@@ -462,7 +462,7 @@ export function HeroSection() {
       >
         <div className="hero-photos-left">
           <Photo
-            src="/assets/hero_photo1.webp"
+            src="/assets/hero_photo1.png"
             bbX={-140}
             bbY={65}
             bbW={390}
@@ -475,7 +475,7 @@ export function HeroSection() {
             parallaxRate={0.15}
           />
           <Photo
-            src="/assets/hero_photo2.webp"
+            src="/assets/hero_photo2.png"
             bbX={-185}
             bbY={225}
             bbW={390}
@@ -488,7 +488,7 @@ export function HeroSection() {
             parallaxRate={0.12}
           />
           <Photo
-            src="/assets/hero_photo3.webp"
+            src="/assets/hero_photo3.png"
             bbX={-170}
             bbY={365}
             bbW={390}
@@ -501,7 +501,7 @@ export function HeroSection() {
             parallaxRate={0.09}
           />
           <Photo
-            src="/assets/hero_photo4.webp"
+            src="/assets/hero_photo4.png"
             bbX={-140}
             bbY={495}
             bbW={390}
@@ -514,7 +514,7 @@ export function HeroSection() {
             parallaxRate={0.07}
           />
           <Photo
-            src="/assets/hero_photo5.webp"
+            src="/assets/hero_photo5.png"
             bbX={-95}
             bbY={610}
             bbW={390}
@@ -527,7 +527,7 @@ export function HeroSection() {
             parallaxRate={0.05}
           />
           <Photo
-            src="/assets/hero_photo6.webp"
+            src="/assets/hero_photo6.png"
             bbX={-100}
             bbY={695}
             bbW={390}
@@ -540,7 +540,7 @@ export function HeroSection() {
             parallaxRate={0.04}
           />
           <Photo
-            src="/assets/hero_photo7.webp"
+            src="/assets/hero_photo7.png"
             bbX={-5}
             bbY={725}
             bbW={390}
@@ -555,7 +555,7 @@ export function HeroSection() {
         </div>
         <div className="hero-photos-right">
           <Photo
-            src="/assets/hero_photo8.webp"
+            src="/assets/hero_photo8.png"
             bbX={1680}
             bbY={70}
             bbW={390}
@@ -569,7 +569,7 @@ export function HeroSection() {
             parallaxRate={0.15}
           />
           <Photo
-            src="/assets/hero_photo9.webp"
+            src="/assets/hero_photo9.png"
             bbX={1710}
             bbY={230}
             bbW={390}
@@ -583,7 +583,7 @@ export function HeroSection() {
             parallaxRate={0.12}
           />
           <Photo
-            src="/assets/hero_photo10.webp"
+            src="/assets/hero_photo10.png"
             bbX={1690}
             bbY={370}
             bbW={390}
@@ -597,7 +597,7 @@ export function HeroSection() {
             parallaxRate={0.09}
           />
           <Photo
-            src="/assets/hero_photo11.webp"
+            src="/assets/hero_photo11.png"
             bbX={1665}
             bbY={500}
             bbW={390}
@@ -611,7 +611,7 @@ export function HeroSection() {
             parallaxRate={0.07}
           />
           <Photo
-            src="/assets/hero_photo12.webp"
+            src="/assets/hero_photo12.png"
             bbX={1640}
             bbY={615}
             bbW={390}
@@ -625,7 +625,7 @@ export function HeroSection() {
             parallaxRate={0.05}
           />
           <Photo
-            src="/assets/hero_photo13.webp"
+            src="/assets/hero_photo13.png"
             bbX={1555}
             bbY={715}
             bbW={390}
@@ -804,7 +804,7 @@ export function HeroSection() {
               animation: "teens-gradient 6s linear infinite",
             }}
           >
-            teens
+            IITians
           </span>
           <br />
           {"make cool stuff."}
@@ -824,8 +824,7 @@ export function HeroSection() {
             maxWidth: "min(600px, calc(100vw - 64px))",
           }}
         >
-          Hack Club is the world&rsquo;s largest nonprofit movement of teenagers making cool
-          projects.
+          Build. Learn. Contribute. OpenLake is IIT Bhilai's hub for open-source innovation and collaborative development.
         </p>
 
         {/* Email signup */}

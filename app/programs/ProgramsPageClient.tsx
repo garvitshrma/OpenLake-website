@@ -863,7 +863,7 @@ export default function ProgramsPage({
             margin: "40px 0 16px",
           }}
         >
-          Programs @ Hack Club
+          Programs @ OpenLake
         </h1>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <p

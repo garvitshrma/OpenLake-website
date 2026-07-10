@@ -1,4 +1,4 @@
-<p align="center"><img width="192" alt="Hack Club logo" src="https://assets.hackclub.com/flag-standalone.svg"></p>
+<p align="center"><img width="192" alt="OpenLake logo" src="https://assets.hackclub.com/flag-standalone.svg"></p>
 <h1 align="center">Hack Club's Site (v4)</h1>
 
 This codebase powers the Hack Club website, which is built with [Next.js](https://nextjs.org/). You can view it live at [hackclub.com](https://hackclub.com/)

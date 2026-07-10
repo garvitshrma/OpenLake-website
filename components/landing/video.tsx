@@ -4,23 +4,19 @@ import { EmailSignupInput } from "./email-signup";
 
 // Community back-img photos — repeated to fill taller section
 const backImgsBase = [
-  "/assets/backImg1.webp",
-  "/assets/backImg2.webp",
-  "/assets/backImg3.webp",
-  "/assets/backImg4.webp",
-  "/assets/backImg5.webp",
-  "/assets/backImg6.webp",
-  "/assets/backImg7.webp",
-  "/assets/backImg8.webp",
-  "/assets/backImg9.webp",
-  "/assets/backImg10.webp",
-  "/assets/backImg11.webp",
-  "/assets/backImg12.webp",
-  "/assets/backImg13.webp",
-  "/assets/backImg14.webp",
-  "/assets/backImg15.webp",
-  "/assets/backImg16.webp",
-  "/assets/backImg17.webp",
+  "/assets/backImg1.png",
+  "/assets/backImg2.png",
+  "/assets/backImg3.png",
+  "/assets/backImg4.png",
+  "/assets/backImg5.png",
+  "/assets/backImg6.png",
+  "/assets/backImg7.png",
+  "/assets/backImg8.png",
+  "/assets/backImg9.png",
+  "/assets/backImg10.png",
+  "/assets/backImg11.png",
+  "/assets/backImg12.png",
+  "/assets/backImg13.png",
 ];
 const backImgs = [...backImgsBase, ...backImgsBase, ...backImgsBase];
 
