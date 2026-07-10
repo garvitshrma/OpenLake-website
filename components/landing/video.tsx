@@ -166,7 +166,7 @@ export function VideoSection() {
           </div>
 
           {/* Italic subtitle */}
-          <p
+          {/* <p
             style={{
               fontFamily: "var(--font-phantom)",
               fontStyle: "italic",
@@ -189,7 +189,7 @@ export function VideoSection() {
             >
               terms.
             </Link>
-          </p>
+          </p> */}
         </div>
       </div>
 
