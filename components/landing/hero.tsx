@@ -737,7 +737,7 @@ export function HeroSection() {
       >
         {/* Stardance link */}
         <a
-          href="https://stardance.hackclub.com/hackclubsite"
+          href="https://fossunited.org/"
           target="_blank"
           rel="noopener"
           className="mag-link hero-mag-link"
@@ -773,7 +773,7 @@ export function HeroSection() {
             height={222}
             style={{ width: 18, height: "auto", display: "block", flexShrink: 0 }}
           />
-          {"Check out Stardance, the largest free STEM event of the summer"}
+          {"Check out FOSS United, India's largest open-source ecosystem."}
           <span className="btn-arrow" aria-hidden="true">
             <BtnArrowSvg />
           </span>

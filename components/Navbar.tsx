@@ -27,7 +27,7 @@ const links = [
   // { label: "Clubs", href: "/clubs" },
   { label: "Events", href: "https://hackathons.hackclub.com" },
   { label: "Domains", dropdown: resources },
-  { label: "Donate", href: "/philanthropy" },
+  // { label: "Donate", href: "/philanthropy" },
 ];
 
 const F = "var(--font-phantom)";
@@ -363,7 +363,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
           <ThemeToggle />
 
           <a
-            href="https://discord.gg/A2J9z92qzd"
+            href="https://slack.hackclub.com"
             className="dark-btn nav-cta"
             style={{
               fontFamily: F,
