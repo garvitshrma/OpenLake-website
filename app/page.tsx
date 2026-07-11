@@ -27,12 +27,12 @@ export default async function Home() {
       <Navbar />
       <main id="main" tabIndex={-1}>
         <HeroSection />
-        <ProjectsSection />
-        {programs.length > 0 && <EventsSection initialCards={programs} />}
-        <HerePhotosSection />
+        {/* <ProjectsSection /> */}
+        {/* {programs.length > 0 && <EventsSection initialCards={programs} />} */}
+        {/* <HerePhotosSection /> */}
         <VideoSection />
-        <DonorsSection />
-        <JoiningSection />
+        {/* <DonorsSection />
+        <JoiningSection /> */}
         <ReadySection />
       </main>
       <Footer />
