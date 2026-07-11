@@ -1,5 +1,6 @@
 "use client";
 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Footer } from "../../components/Footer";
@@ -84,6 +85,8 @@ function BoardCard({
   bio,
   email,
   href,
+  github,
+  linkedin,
 }: {
   img: string;
   name: string;
@@ -92,6 +95,8 @@ function BoardCard({
   bio?: string;
   email?: string;
   href?: string;
+  github?: string;
+  linkedin?: string;
 }) {
   const mailHref = email
     ? email.includes("@")
@@ -110,7 +115,7 @@ function BoardCard({
       />
       <p className="board-card__name">{name}</p>
       <p className="board-card__role">{boardRole}</p>
-      {subrole && <p className="board-card__subrole">{subrole}</p>}
+      {/* {subrole && <p className="board-card__subrole">{subrole}</p>}
       {bio && <p className="board-card__bio">{bio}</p>}
       {mailHref && (
         <a
@@ -120,7 +125,29 @@ function BoardCard({
         >
           {email!.includes("@") ? email : `${email}@hackclub.com`}
         </a>
-      )}
+      )} */}
+      <div
+        className="board-card__socials"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "12px",
+          marginTop: "10px",
+        }}
+      >
+        {github && (
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <FaGithub size={20} />
+          </a>
+        )}
+
+        {linkedin && (
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={20} />
+          </a>
+        )}
+      </div>
     </article>
   );
   return href ? (
@@ -296,13 +323,20 @@ export default function TeamPageClient({
       <section className="team-shell board-section">
         <div className="board-section__inner">
           <h2 className="board-section__title">Secretary</h2>
-          <div className="board-grid board-grid--leaders">
+          <div
+            className="board-grid board-grid--leaders"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <BoardCard
-              img="https://cdn.hackclub.com/019d8d79-96e5-7902-9e5b-1de299c1bdff/2026_04_14_0pu_Kleki%20(2).png"
+              img="/team/AKD.jpeg"
               name="Ashish Kumar Dash"
-              boardRole="Founder"
-              bio="Zach founded Hack Club after dropping out of high school to build software used by millions. He's been awarded the Thiel Fellowship and Forbes 30 Under 30."
-              email="zach"
+              boardRole=""
+              github="https://github.com/Ashish-Kumar-Dash"
+              linkedin="https://www.linkedin.com/in/ashish-kumar-dash/"
             />
           </div>
         </div>
@@ -313,21 +347,21 @@ export default function TeamPageClient({
           <h2 className="board-section__title">Domain Leads</h2>
           <div className="board-grid board-grid--leaders">
             <BoardCard
-              img="https://cdn.hackclub.com/019d8d79-96e5-7902-9e5b-1de299c1bdff/2026_04_14_0pu_Kleki%20(2).png"
-              name="Zach Latta"
-              boardRole="Founder"
-              bio="Zach founded Hack Club after dropping out of high school to build software used by millions. He's been awarded the Thiel Fellowship and Forbes 30 Under 30."
-              email="zach"
+              img="/team/Aditya_Kumar_Gautam.jpeg"
+              name="Aditya Kumar Gautam"
+              boardRole=""
+              github="https://github.com/aditya-91O2"
+              linkedin="https://github.com/aditya-91O2"
             />
             <BoardCard
-              img="https://cdn.hackclub.com/019d8d79-0da7-7b99-a8fe-ee6412aca976/2026_04_14_0pu_Kleki%20(1).png"
-              name="Christina Asquith"
-              boardRole="Co-Founder"
-              bio="Christina cofounded Hack Club after 20 years as a journalist/war correspondent, reporting from Iraq, Afghanistan and Africa, and founding The Fuller Project, an investigative journalism nonprofit focused on women. She holds an MA in philosophy from London School of Economics and has published 2 nonfiction books."
-              email="christina"
+              img="/team/Rudra.jpg"
+              name="Rudra Dudhat"
+              boardRole=""
+              github="https://github.com/RudraDudhat2509"
+              linkedin="https://www.linkedin.com/in/rdudhat-iitbhilai"
             />
           </div>
-          <div className="board-grid board-grid--advisors">
+          {/* <div className="board-grid board-grid--advisors">
             <BoardCard
               img="https://cdn.hackclub.com/019da8a0-de67-721b-911c-5a4cf1a2ad4a/p.webp"
               name="Tom Preston-Werner"
@@ -348,6 +382,125 @@ export default function TeamPageClient({
               boardRole="Board Advisor"
               subrole="Founder, Boston Scientific"
               href="https://en.wikipedia.org/wiki/John_Abele"
+            />
+          </div> */}
+        </div>
+      </section>
+      <section className="team-shell board-section">
+        <div className="board-section__inner">
+          <h2 className="board-section__title">Mentors</h2>
+          <div className="board-grid board-grid--advisors">
+            <BoardCard
+              img="/team/Garvit_Sharma.jpg"
+              name="Garvit Sharma"
+              boardRole=""
+              github="https://github.com/garvitshrma"
+              linkedin="http://www.linkedin.com/in/-garvitsharma"
+            />
+            <BoardCard
+              img="/team/Jaswanth_Kumar.jpg"
+              name="Kamireddi Jaswanth Kumar"
+              boardRole=""
+              github="https://github.com/Jaswanth-Kumar-2007"
+              linkedin="https://www.linkedin.com/in/jaswanth-kumar-kamireddi-86ba09373/"
+            />
+            <BoardCard
+              img="/team/Umap_Utkarsh.jpg"
+              name="Umap Utkarsh Sharad"
+              boardRole=""
+              github="https://github.com/UtkarshUmap"
+              linkedin="https://github.com/UtkarshUmap"
+            />
+            <BoardCard
+              img="/team/Eashan.jpg"
+              name="Eashan Hasija"
+              boardRole=""
+              github="http://github.com/Eashan-H"
+              linkedin="https://www.linkedin.com/in/eashan-hasija-1a209831b/"
+            />
+            <BoardCard
+              img="/team/Shlok.jpg"
+              name="Shlok Divyam"
+              boardRole=""
+              github="https://github.com/ShlokDivyam1109"
+              linkedin="https://www.linkedin.com/in/shlok-divyam-91bbb4333"
+            />
+            <BoardCard
+              img="/team/Siddhi_S.jpeg"
+              name="Siddhi Singh"
+              boardRole=""
+              github="https://github.com/siddhisingh9"
+              linkedin="https://www.linkedin.com/in/siddhi-singh-33170323a/"
+            />
+            <BoardCard
+              img="/team/Tanmay_Jaiswal.jpg"
+              name="Tanmay Jaiswal"
+              boardRole=""
+              github="https://github.com/TanmayJaiswal-IITBH"
+              linkedin="https://www.linkedin.com/in/tanmay-jaiswal-91978a333?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="team-shell board-section">
+        <div className="board-section__inner">
+          <h2 className="board-section__title">Maintainers</h2>
+          <div className="board-grid board-grid--advisors">
+            <BoardCard
+              img="/team/Taha.jpeg"
+              name="Taha Hussain"
+              boardRole=""
+              github="https://github.com/Taha254511"
+              linkedin="https://www.linkedin.com/in/taha-hussain-248429368?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            />
+            <BoardCard
+              img="/team/Mounika.jpg"
+              name="Kotapati Sai Mounika"
+              boardRole=""
+              github="https://github.com/KotapatiSaiMounika"
+              linkedin="https://www.linkedin.com/in/sai-mounika-kotapati-269494321/"
+            />
+            <BoardCard
+              img="/team/img.jpeg"
+              name="Harshit Kandpal"
+              boardRole=""
+              github="https://www.linkedin.com/in/harshit-k-a746a1310/"
+              linkedin="https://www.linkedin.com/in/harshit-k-a746a1310/"
+            />
+            <BoardCard
+              img="/team/Neil_Chitale.jpg"
+              name="Neil Chitale"
+              boardRole=""
+              github="https://github.com/Neil-ctrl"
+              linkedin="https://www.linkedin.com/in/neil-chitale/"
+            />
+            <BoardCard
+              img="/team/Prashant.jpg"
+              name="Prashant Sati"
+              boardRole=""
+              github="https://github.com/Prashant-SG14"
+              linkedin="https://www.linkedin.com/in/prashant-sati-800493315/"
+            />
+            <BoardCard
+              img="/team/Vidit.jpg"
+              name="Vidit Shrimali"
+              boardRole=""
+              github="https://github.com/Vidit-lab"
+              linkedin="https://www.linkedin.com/in/vidit-shrimali-71a26331a/"
+            />
+            <BoardCard
+              img="/team/img2.png"
+              name="Harshita Sharma"
+              boardRole=""
+              github="https://github.com/harshita-sl"
+              linkedin="https://www.linkedin.com/in/harshita-sharma-389b6231b/"
+            />
+            <BoardCard
+              img="/team/Sujal_Som.jpg"
+              name="Sujal Som"
+              boardRole=""
+              github="https://github.com/sujalsom22"
+              linkedin="https://www.linkedin.com/in/sujal-som-053613376/"
             />
           </div>
         </div>
@@ -382,30 +535,6 @@ export default function TeamPageClient({
           />
         </div>
       </section> */}
-
-      <section className="team-shell team-section team-section--community">
-        <div className="team-section__header">
-          <p className="team-kicker team-kicker--dark">Community Teams</p>
-          <h2 className="team-section__title">
-            The teen-facing crews shaping daily culture.
-          </h2>
-          <p className="team-section__copy">
-            These teams are the visible edge of Hack Club: welcoming people in,
-            moderating the space, hosting events, and telling the story of what
-            everyone is making together.
-          </p>
-        </div>
-
-        <div className="pod-grid">
-          {communityPods.map((pod) => (
-            <CommunityPod
-              key={pod.title}
-              {...pod}
-              onMemberClick={setSelectedMember}
-            />
-          ))}
-        </div>
-      </section>
 
       <Footer />
 

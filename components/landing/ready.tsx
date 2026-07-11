@@ -85,32 +85,32 @@ export function ReadySection() {
         </Link>
 
         {/* Italic subtitle */}
-        <p
-          style={{
-            fontFamily: "var(--font-phantom)",
-            fontWeight: 400,
-            fontStyle: "italic",
-            fontSize: 16,
-            color: "var(--foreground)",
-            margin: "20px 0 0",
-            lineHeight: 1.2,
-            pointerEvents: "auto",
-          }}
-        >
-          For all teens aged 13–18. By continuing, you agree to our{" "}
-          <Link
-            href="/privacy-and-terms"
-            className="ready-terms-link"
+          {/* <p
             style={{
-              color: "var(--red)",
-              textDecoration: "underline",
-              textUnderlineOffset: 2,
+              fontFamily: "var(--font-phantom)",
+              fontWeight: 400,
+              fontStyle: "italic",
+              fontSize: 16,
+              color: "var(--foreground)",
+              margin: "20px 0 0",
+              lineHeight: 1.2,
               pointerEvents: "auto",
             }}
           >
-            terms.
-          </Link>
-        </p>
+            For all teens aged 13–18. By continuing, you agree to our{" "}
+            <Link
+              href="/privacy-and-terms"
+              className="ready-terms-link"
+              style={{
+                color: "var(--red)",
+                textDecoration: "underline",
+                textUnderlineOffset: 2,
+                pointerEvents: "auto",
+              }}
+            >
+              terms.
+            </Link>
+          </p> */}
       </div>
 
       <style>{`
