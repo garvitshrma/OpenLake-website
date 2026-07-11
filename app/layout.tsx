@@ -23,9 +23,9 @@ const organizationJsonLd = {
   logo: "https://assets.hackclub.com/flag-standalone.png",
   sameAs: [
     "https://twitter.com/hackclub",
-    "https://github.com/hackclub",
-    "https://www.youtube.com/c/HackClubHQ",
-    "https://www.instagram.com/starthackclub",
+    "https://github.com/OpenLake",
+    "https://www.youtube.com/@openlakeiitbhilai1724",
+    "https://www.instagram.com/openlake_iitbhilai/",
   ],
 };
 

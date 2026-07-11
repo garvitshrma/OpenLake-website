@@ -45,10 +45,10 @@ const resLinks = [
 ];
 
 const icons = [
-  { label: "GitHub", href: "https://github.com/hackclub", glyph: "github" },
-  { label: "YouTube", href: "https://www.youtube.com/c/HackClubHQ", glyph: "youtube" },
-  { label: "Instagram", href: "https://www.instagram.com/starthackclub", glyph: "instagram" },
-  { label: "Email", href: "mailto:team@hackclub.com", glyph: "email" },
+  { label: "GitHub", href: "https://github.com/OpenLake", glyph: "github" },
+  { label: "YouTube", href: "https://www.youtube.com/@openlakeiitbhilai1724", glyph: "youtube" },
+  { label: "Instagram", href: "https://www.instagram.com/openlake_iitbhilai/", glyph: "instagram" },
+  { label: "Email", href: "mailto:openlake@iitbhilai.ac.in", glyph: "email" },
 ];
 
 const sha = process.env.NEXT_PUBLIC_COMMIT_SHA ?? "dev";
