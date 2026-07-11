@@ -1177,31 +1177,7 @@ export default function ProgramsPage({
               margin: "0 0 4px",
             }}
           >
-            Every event below is free and open to any teen, over the world. Yes, you can go!
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              margin: 0,
-            }}
-          >
-            (Check out our program documentary videos{" "}
-            <a
-              href="https://www.youtube.com/@HackClubHQ/videos"
-              target="_blank"
-              style={{ color: "#ec3750", textDecoration: "none" }}
-            >
-              on YouTube
-              <span
-                aria-hidden="true"
-                style={{ display: "inline-flex", verticalAlign: "middle", marginLeft: 2 }}
-              >
-                <BtnArrowSvg />
-              </span>
-            </a>
-            )
+            We always strive towards the benefit of society with our projects.
           </p>
         </div>
 
