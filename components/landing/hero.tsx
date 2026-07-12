@@ -398,7 +398,7 @@ export function HeroSection() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        background: "linear-gradient(180deg, rgba(236,55,80,0.04) 60%, rgb(17, 94, 227) 100%)",
+        background: "linear-gradient(180deg, rgba(236,55,80,0.04) 60%, #28a9e2 100%)",
       }}
     >
       {/*

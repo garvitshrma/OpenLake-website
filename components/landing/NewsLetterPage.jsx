@@ -541,16 +541,14 @@ export default function NewsletterPage() {
               margin: 0,
             }}
           >
-            Want to write for the next issue? Say hi in the{" "}
             <a
               href="https://slack.hackclub.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#ec3750", textDecoration: "none" }}
             >
-              Slack
             </a>
-            .
+            
           </p>
           <p
             style={{
@@ -561,11 +559,9 @@ export default function NewsletterPage() {
               margin: 0,
             }}
           >
-            Or head back to our{" "}
             <Link href="/programs" style={{ color: "#ec3750", textDecoration: "none" }}>
-              programs
             </Link>
-            .
+
           </p>
         </div>
       </div>
