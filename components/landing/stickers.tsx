@@ -105,7 +105,7 @@ export function StickerEnvelopeLink() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/hackClubFlag.svg"
+                src="/assets/openlake.svg"
                 alt=""
                 style={{ width: "82%", height: "auto", display: "block" }}
               />

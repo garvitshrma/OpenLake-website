@@ -150,7 +150,7 @@ export function Footer() {
           <div style={{ marginBottom: 28 }}>
             <Link href="/">
               <Image
-                src="/assets/hackClubFlag.svg"
+                src="/assets/openlake.svg"
                 alt="Hack Club"
                 width={200}
                 height={70}

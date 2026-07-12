@@ -590,7 +590,6 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
               paddingRight: 110,
             }}
           >
-            Join the discussion in{" "}
             <a
               href={slackUrl ?? "#"}
               target="_blank"
@@ -602,38 +601,11 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
                 whiteSpace: "nowrap",
               }}
             >
-              #{slackChannel.replace(/^#/, "")}
             </a>
           </p>
         )}
 
-        {/* Badge */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            height: 36,
-            width: 130,
-            background: badgeEnded ? "var(--surface-hover)" : "var(--red)",
-            borderTopLeftRadius: 8,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontWeight: "bold",
-              fontSize: 16,
-              color: badgeEnded ? "var(--foreground)" : "var(--paper)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            {badgeLabel}
-          </span>
-        </div>
+      
       </div>
     </div>
   );
