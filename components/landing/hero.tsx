@@ -438,7 +438,7 @@ export function HeroSection() {
           }}
         >
           <Image
-            src="/assets/background.webp"
+            src="/assets/background3.png"
             alt=""
             width={1920}
             height={840}

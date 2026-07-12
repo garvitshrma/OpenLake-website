@@ -1098,7 +1098,7 @@ export default function ProgramsPage({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         ref={magazineBgRef}
-        src="/assets/background.webp"
+        src="/assets/background.png"
         alt=""
         style={{
           position: "absolute",
@@ -1360,16 +1360,13 @@ export default function ProgramsPage({
               margin: 0,
             }}
           >
-            Looking for more? Our community plans and ideates in the{" "}
             <a
               href="https://slack.hackclub.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#ec3750", textDecoration: "none" }}
             >
-              Slack
             </a>
-            , where new events are being announced all the time.
           </p>
           <p
             style={{
@@ -1380,11 +1377,8 @@ export default function ProgramsPage({
               margin: 0,
             }}
           >
-            You can also{" "}
             <Link href="/programs/edit" style={{ color: "#ec3750", textDecoration: "none" }}>
-              edit an event here
             </Link>
-            .
           </p>
         </div>
       </div>

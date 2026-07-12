@@ -116,7 +116,7 @@ export function Footer() {
     >
       <Image
         className="site-footer-illustration"
-        src="/assets/footer.webp"
+        src="/assets/footer3.png"
         alt=""
         width={680}
         height={558}
@@ -184,7 +184,7 @@ export function Footer() {
               display: "inline-block",
             }}
           >
-            1-855-625-HACK (call toll-free)
+            +91 95998 90446 (call toll-free)
           </a>
           <div style={{ display: "flex", gap: 12 }}>
             {icons.map((i) => (
@@ -214,7 +214,7 @@ export function Footer() {
           </div>
         </div>
         <div style={{ display: "flex", gap: 48, flexWrap: "wrap" }}>
-          <LinkCol title="Hack Club" links={hcLinks} />
+          <LinkCol title="OpenLake" links={hcLinks} />
           <LinkCol title="Resources" links={resLinks} />
         </div>
       </div>

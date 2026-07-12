@@ -162,7 +162,7 @@ export function StickerEnvelopeLink() {
               TO:
             </span>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, a teenager</div>
+              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, an IITian</div>
               <div
                 style={{
                   borderBottom: "1.2px solid rgba(23,23,29,0.35)",
