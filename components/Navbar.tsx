@@ -364,7 +364,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
           <ThemeToggle />
 
           <a
-            href="https://slack.hackclub.com"
+            href="https://discord.gg/A2J9z92qzd"
             className="dark-btn nav-cta"
             style={{
               fontFamily: F,
