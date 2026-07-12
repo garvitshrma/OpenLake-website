@@ -346,7 +346,7 @@ export default function NewsletterPage() {
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/assets/bgFade.svg"
+        src="/assets/bgFade2.svg"
         alt=""
         style={{
           position: "absolute",
