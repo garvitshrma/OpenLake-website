@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
-import NewsLetterPage from "../components/landing/NewsLetterPage";
 
 const about = [
   { label: "Philosophy", href: "/philosophy" },
