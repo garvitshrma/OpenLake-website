@@ -711,7 +711,7 @@ export function HeroSection() {
           content: '';
           position: absolute;
           inset: 0;
-          background: #ec3750;
+          background: #395eda;
           transform: translateX(-101%);
           z-index: -1;
         }
