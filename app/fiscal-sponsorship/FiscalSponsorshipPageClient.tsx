@@ -6,15 +6,17 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeLock } from "@/components/ThemeToggle";
-import { Features } from "@/components/fiscal-sponsorship/Features";
-import { OrganizationGrid } from "@/components/fiscal-sponsorship/OrganizationSpotlight";
+// import { Features } from "@/components/fiscal-sponsorship/Features";
+// import { OrganizationGrid } from "@/components/fiscal-sponsorship/OrganizationSpotlight";
 import { ContactBanner } from "@/components/fiscal-sponsorship/ContactBanner";
-import { OpenSource } from "@/components/fiscal-sponsorship/OpenSource";
+// import { OpenSource } from "@/components/fiscal-sponsorship/OpenSource";
 import { SignIn } from "@/components/fiscal-sponsorship/SignIn";
-import { Icon } from "@/components/Icon";
+// import { Icon } from "@/components/Icon";
 import { FISCAL_COLORS, FISCAL_TYPOGRAPHY } from "@/components/fiscal-sponsorship/constants";
 import { MOCK_ORGANIZATIONS } from "@/lib/fiscal-sponsorship-data";
-import { BtnArrowSvg } from "@/components/landing/btn-arrow";
+// import { BtnArrowSvg } from "@/components/landing/btn-arrow";
+import { WebHero } from "@/components/fiscal-sponsorship/WebHero";
+import { ResourceSection } from "@/components/fiscal-sponsorship/ResourceSection";
 
 const V = FISCAL_TYPOGRAPHY.sectionPaddingV;
 const H = FISCAL_TYPOGRAPHY.sectionPaddingH;
@@ -176,108 +178,8 @@ function MobileAppSection() {
           alignItems: "center",
         }}
       >
-        <div>
-          <h2
-            style={{
-              fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
-              fontSize: "clamp(32px, 4vw, 48px)",
-              fontWeight: 400,
-              color: FISCAL_COLORS.text,
-              margin: 0,
-              marginBottom: "1rem",
-              lineHeight: 1.1,
-            }}
-          >
-            HCB in your <span style={{ color: FISCAL_COLORS.primary }}>pocket</span>
-          </h2>
-          <p
-            style={{
-              fontSize: "20px",
-              fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-              color: FISCAL_COLORS.text,
-              margin: 0,
-              marginBottom: "1.5rem",
-              lineHeight: 1.5,
-            }}
-          >
-            The official mobile app lets you manage your organization&apos;s finances, issue cards,
-            and more!
-          </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "1rem",
-              marginBottom: "1.5rem",
-            }}
-          >
-            {features.map((f) => (
-              <div
-                key={f.icon}
-                style={{
-                  padding: "1.25rem",
-                  backgroundColor: FISCAL_COLORS.lightGray,
-                  borderRadius: "12px",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    marginBottom: "0.5rem",
-                    gap: "0.5rem",
-                  }}
-                >
-                  <strong
-                    style={{
-                      fontSize: "15px",
-                      fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-                      color: FISCAL_COLORS.text,
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {f.title}
-                  </strong>
-                  <div style={{ color: FISCAL_COLORS.primary, flexShrink: 0 }}>
-                    <Icon glyph={f.icon} size={30} />
-                  </div>
-                </div>
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: "14px",
-                    fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-                    color: FISCAL_COLORS.text,
-                    opacity: 0.8,
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {f.body}
-                </p>
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/fiscal-sponsorship/mobile"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              padding: "12px 24px",
-              backgroundColor: FISCAL_COLORS.primary,
-              color: "white",
-              borderRadius: "9999px",
-              fontSize: "16px",
-              fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-              textDecoration: "none",
-              fontWeight: 500,
-            }}
-          >
-            Read our story
-            <Icon glyph="view-forward" size={20} />
-          </Link>
-        </div>
+        
+        
         <div
           style={{
             position: "relative",
@@ -309,14 +211,7 @@ function MobileAppSection() {
               {mobileInstalls.toLocaleString()} installs
             </span>
           )}
-          <Image
-            src="/fiscal-sponsorship/mobile-mockup.webp"
-            alt="HCB mobile app mockup"
-            loading="eager"
-            width={400}
-            height={800}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
+          
         </div>
       </div>
 
@@ -356,67 +251,6 @@ function FeesSection() {
           alignItems: "start",
         }}
       >
-        <div>
-          <h2
-            style={{
-              fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
-              fontSize: "clamp(28px, 3.5vw, 44px)",
-              fontWeight: 400,
-              color: "#2376ae",
-              margin: 0,
-              marginBottom: "1rem",
-              lineHeight: 1.0,
-            }}
-          >
-            One simple, transparent fee:
-            <br />
-            7% of revenue.
-          </h2>
-          <p
-            style={{
-              fontSize: "15px",
-              fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-              color: "#687578",
-              margin: 0,
-              lineHeight: 1.6,
-              maxWidth: "52ch",
-            }}
-          >
-            This fee goes directly to Hack Club&apos;s operations staff, including teen interns
-            working under mentors. This allows us to deliver best-in-class software and support,
-            grow sustainably, while also providing paid career training for young people from
-            diverse backgrounds.
-          </p>
-        </div>
-        <div>
-          <p
-            style={{
-              fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-              fontSize: "clamp(18px, 2vw, 24px)",
-              lineHeight: 1.6,
-              margin: 0,
-              background:
-                "linear-gradient(to right, #f06844 0%, #ee4c54 25%, #d45e95 50%, #9c6ca6 75%, #6583c1 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            No legal fees.
-            <br />
-            No startup fees.
-            <br />
-            No transaction fees.
-            <br />
-            No card issuing fees.
-            <br />
-            No subscription fees.
-            <br />
-            No check deposit fees.
-            <br />
-            No credit card processing fees.
-          </p>
-        </div>
       </div>
 
       <style jsx>{`
@@ -441,106 +275,6 @@ function BuiltByHackClub() {
         backgroundColor: FISCAL_COLORS.background,
       }}
     >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "3rem",
-          alignItems: "center",
-        }}
-      >
-        <Link
-          href="https://outernet.hackclub.com/"
-          style={{ display: "block", borderRadius: "16px", overflow: "hidden" }}
-        >
-          <Image
-            src="https://cdn.hackclub.com/019db857-4b48-7633-9df8-a4b335a251ef/bigCollage.webp"
-            alt="Thousands of teenagers attend Hack Club events like this"
-            width={600}
-            height={400}
-            style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
-          />
-        </Link>
-        <div>
-          <h2
-            style={{
-              fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
-              fontSize: "clamp(28px, 3vw, 40px)",
-              fontWeight: 400,
-              color: FISCAL_COLORS.text,
-              margin: 0,
-              marginBottom: "1rem",
-              lineHeight: 1.2,
-            }}
-          >
-            Built by Hack Club
-          </h2>
-          <p
-            style={{
-              fontSize: "17px",
-              fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-              color: FISCAL_COLORS.text,
-              margin: 0,
-              marginBottom: "1rem",
-              lineHeight: 1.6,
-            }}
-          >
-            As{" "}
-            <Link href="/" style={{ color: FISCAL_COLORS.primary, textDecoration: "none" }}>
-              Hack Club
-            </Link>{" "}
-            grew, we needed a way to empower our members. We currently have over 60,000 high
-            schoolers involved in Hack Club with over 400 clubs around the world.
-          </p>
-          <p
-            style={{
-              fontSize: "17px",
-              fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-              color: FISCAL_COLORS.text,
-              margin: 0,
-              marginBottom: "1.5rem",
-              lineHeight: 1.6,
-            }}
-          >
-            We started HCB in 2018 to support teen-led clubs and hackathons. After showing it to our
-            educational partners, we knew we had tapped into something much larger. Today, HCB
-            removes financial and legal barriers for thousands doing good in their community.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              gap: "0.75rem",
-              color: "#687578",
-              lineHeight: 1.5,
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={28}
-              height={28}
-              viewBox="0 0 16 16"
-              aria-hidden
-              style={{ flexShrink: 0, fill: "#2376ae", marginTop: "2px" }}
-            >
-              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
-            </svg>
-            <span style={{ fontSize: "15px", fontFamily: FISCAL_TYPOGRAPHY.bodyFont }}>
-              As part of our commitment to the environment, funding for HCB&apos;s operations and
-              staff will never come from the{" "}
-              <a
-                href="https://www.ffisolutions.com/the-carbon-underground-200-500/"
-                style={{ color: "#2376ae", textDecoration: "none" }}
-              >
-                fossil fuel industry
-              </a>
-              .
-            </span>
-          </div>
-        </div>
-      </div>
 
       <style jsx>{`
         @media (max-width: 768px) {
@@ -576,6 +310,8 @@ export default function FiscalSponsorshipPage() {
     <>
       <ThemeLock />
       <Navbar invertColors />
+      <WebHero />
+      <ResourceSection />
       <main id="main" tabIndex={-1}>
         {/* Hero */}
         <header
@@ -651,23 +387,6 @@ export default function FiscalSponsorshipPage() {
                 of your nonprofit.
               </h1>
 
-              <p
-                style={{
-                  fontSize: "clamp(18px, 2.2vw, 22px)",
-                  fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-                  color: "white",
-                  margin: 0,
-                  marginTop: "1.5rem",
-                  marginBottom: "2rem",
-                  lineHeight: 1.5,
-                  maxWidth: "55ch",
-                }}
-              >
-                Start your nonprofit with <strong>our fiscal sponsorship program, HCB</strong>: a
-                501(c)(3) legal entity, bank account, automatic taxes &amp; accounting, and
-                best-in-class software.
-              </p>
-
               {referralParam && (
                 <div
                   style={{
@@ -702,32 +421,7 @@ export default function FiscalSponsorshipPage() {
                   alignItems: "center",
                 }}
               >
-                <Link
-                  href="https://hcb.hackclub.com/applications/new"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxSizing: "border-box",
-                    width: "min(100%, 175px)",
-                    minHeight: "50px",
-                    padding: "0 16px",
-                    background: "linear-gradient(180deg, #4fc3ff 0%, #2f8df6 100%)",
-                    color: "white",
-                    borderRadius: "9999px",
-                    fontSize: "17px",
-                    fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-                    textDecoration: "none",
-                    fontWeight: 800,
-                    lineHeight: 1,
-                    letterSpacing: "0.04em",
-                    textTransform: "uppercase",
-                    boxShadow: "0 8px 18px rgba(37, 99, 235, 0.24)",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  Apply now
-                </Link>
+                
                 <SignIn />
               </div>
             </div>
@@ -777,186 +471,40 @@ export default function FiscalSponsorshipPage() {
           `}</style>
         </header>
 
-        <MobileAppAlert />
-
-        <MobileAppSection />
-
-        <section
-          id="organizations"
-          style={{
-            paddingTop: V,
-            paddingBottom: V,
-            paddingLeft: H,
-            paddingRight: H,
-            backgroundColor: FISCAL_COLORS.lightGray,
-          }}
-        >
-          <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-            <h2
-              style={{
-                fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
-                fontSize: "clamp(32px, 4vw, 48px)",
-                fontWeight: 400,
-                color: FISCAL_COLORS.text,
-                margin: 0,
-                marginBottom: "1.5rem",
-                lineHeight: 1.1,
-                maxWidth: "20ch",
-              }}
-            >
-              Powering nonprofits at every scale
-            </h2>
-
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap" as const,
-                gap: "2rem",
-                marginBottom: "2.5rem",
-              }}
-            >
-              <StatItem value="$100M+" label="processed transactions" />
-              <StatItem value="6500+" label="projects" />
-              <StatItem value="2018" label="serving nonprofits since" />
-            </div>
-
-            <OrganizationGrid organizations={FEATURED_ORGANIZATIONS} />
-
-            <div
-              style={{
-                marginTop: "2rem",
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Link
-                href="/fiscal-sponsorship/directory"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  padding: "14px 28px",
-                  background: "linear-gradient(to right, #687578, #33383f)",
-                  color: "white",
-                  borderRadius: "9999px",
-                  fontSize: "18px",
-                  fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-                  textDecoration: "none",
-                  fontWeight: 500,
-                  whiteSpace: "nowrap" as const,
-                }}
-              >
-                See more organizations <BtnArrowSvg />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <Features />
-
-        <FeesSection />
-
-        <BuiltByHackClub />
-
-        <OpenSource />
-
-        <section
-          id="apply"
-          style={{
-            position: "relative",
-            padding: "80px 24px",
-            backgroundImage: `
-              radial-gradient(ellipse at 5% 5%, #e86494 0%, rgba(232,100,148,0) 75%),
-              radial-gradient(ellipse at 95% 5%, #e86494 0%, rgba(232,100,148,0) 75%),
-              radial-gradient(ellipse at 95% 95%, #baa8d3 0%, rgba(186,168,211,0) 75%),
-              radial-gradient(ellipse at 5% 95%, #fa9f69 0%, rgba(250,159,105,0) 75%)
-            `,
-            backgroundColor: "rgb(104, 41, 205)",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              zIndex: 0,
-              backgroundSize: "48px 48px",
-              backgroundImage: `linear-gradient(to right, #fcc8bf 1px, transparent 1px),
-                                linear-gradient(to bottom, #fcc8bf 1px, transparent 1px)`,
-              backgroundPosition: "top left",
-              maskImage: "linear-gradient(180deg, transparent 0%, white 3%)",
-              WebkitMaskImage: "linear-gradient(180deg, transparent 0%, white 3%)",
-              opacity: 0.1,
-            }}
-          />
-          <div
-            style={{
-              position: "relative",
-              zIndex: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-            }}
-          >
-            <Link href="https://hcb.hackclub.com/applications/new">
-              <button
-                style={{
-                  backgroundColor: "white",
-                  color: "#17171d",
-                  fontSize: "clamp(40px, 8vw, 96px)",
-                  padding: "24px clamp(24px, 6vw, 80px)",
-                  borderRadius: "16px",
-                  border: "none",
-                  cursor: "pointer",
-                  fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
-                  fontWeight: 400,
-                  lineHeight: 0.9,
-                  mixBlendMode: "screen" as const,
-                }}
-              >
-                Apply now
-              </button>
-            </Link>
-          </div>
-        </section>
-
-        <ContactBanner />
+        {/* <ContactBanner /> */}
       </main>
       <Footer />
     </>
   );
 }
 
-function StatItem({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <p
-        style={{
-          fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
-          fontSize: "clamp(28px, 3.5vw, 42px)",
-          fontWeight: 400,
-          color: FISCAL_COLORS.text,
-          margin: 0,
-          lineHeight: 1,
-        }}
-      >
-        {value}
-      </p>
-      <p
-        style={{
-          fontSize: "16px",
-          fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
-          color: FISCAL_COLORS.text,
-          margin: 0,
-          opacity: 0.7,
-          marginTop: "4px",
-        }}
-      >
-        {label}
-      </p>
-    </div>
-  );
-}
+// function StatItem({ value, label }: { value: string; label: string }) {
+//   return (
+//     <div>
+//       <p
+//         style={{
+//           fontFamily: FISCAL_TYPOGRAPHY.headlineFont,
+//           fontSize: "clamp(28px, 3.5vw, 42px)",
+//           fontWeight: 400,
+//           color: FISCAL_COLORS.text,
+//           margin: 0,
+//           lineHeight: 1,
+//         }}
+//       >
+//         {value}
+//       </p>
+//       <p
+//         style={{
+//           fontSize: "16px",
+//           fontFamily: FISCAL_TYPOGRAPHY.bodyFont,
+//           color: FISCAL_COLORS.text,
+//           margin: 0,
+//           opacity: 0.7,
+//           marginTop: "4px",
+//         }}
+//       >
+//         {label}
+//       </p>
+//     </div>
+//   );
+// }

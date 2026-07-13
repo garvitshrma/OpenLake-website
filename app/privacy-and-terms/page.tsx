@@ -3,6 +3,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
+import GameDevHero from "../../components/privacy-and-terms/GameDevHero";
+import ResourceSection from "../../components/privacy-and-terms/ResourceSection";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Notice & Terms — Hack Club",
@@ -15,5 +17,11 @@ export default function PrivacyAndTermsPage() {
     path.join(process.cwd(), "content/privacy-and-terms.md"),
     "utf-8",
   );
-  return <MarkdownPage content={content} />;
+  return (
+  <>
+    <GameDevHero />
+    <ResourceSection />
+    <MarkdownPage content={content} />
+  </>
+);
 }
