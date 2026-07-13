@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
+import AIHero from "./safety/AIHero";
+import ResourceSection from "./safety/ResourceSection";
 
 type SafetyCard = {
   title: string;
@@ -11,31 +13,27 @@ type SafetyCard = {
 };
 
 const cards: SafetyCard[] = [
-  {
-    title: "Code of Conduct",
-    description:
-      "The standards we hold everyone to across our community spaces, events, and projects.",
-    href: "/conduct",
-  },
-  {
-    title: "Safeguarding Policy",
-    description: "How we protect participants at our in-person events.",
-    href: "/safeguarding",
-  },
+  // {
+  //   title: "Code of Conduct",
+  //   description:
+  //     "The standards we hold everyone to across our community spaces, events, and projects.",
+  //   href: "/conduct",
+  // },
+  // {
+  //   title: "Safeguarding Policy",
+  //   description: "How we protect participants at our in-person events.",
+  //   href: "/safeguarding",
+  // },
 ];
 
 export function SafetyPage() {
   return (
     <main id="main" tabIndex={-1} className="safety-page">
-      <section className="safety-hero">
-        <Navbar invertColors />
-        <div className="safety-shell safety-hero__inner">
-          <h1>Hack Club Safety</h1>
-        </div>
-        <div className="safety-hero__grain" aria-hidden="true" />
-      </section>
+      <Navbar invertColors />
+      <AIHero />
+      <ResourceSection />
 
-      <section className="safety-shell safety-section">
+      {/* <section className="safety-shell safety-section">
         <div className="safety-help">
           <div className="safety-help__row">
             <div className="safety-help__context">
@@ -86,7 +84,7 @@ export function SafetyPage() {
             </Link>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <Footer />
 

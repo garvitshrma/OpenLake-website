@@ -3,6 +3,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
+import AppDevHero from "../../components/conduct/AppDevHero";
+import ResourceSection from "../../components/conduct/ResourceSection";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Code of Conduct — Hack Club",
@@ -12,5 +14,11 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function ConductPage() {
   const content = fs.readFileSync(path.join(process.cwd(), "content/conduct.md"), "utf-8");
-  return <MarkdownPage content={content} />;
+  return (
+  <>
+    <AppDevHero />
+    <ResourceSection />
+    <MarkdownPage content={content} />
+  </>
+);
 }
