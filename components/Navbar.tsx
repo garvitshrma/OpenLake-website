@@ -26,7 +26,7 @@ const links = [
   { label: "Projects", href: "/programs" },
   // { label: "Clubs", href: "/clubs" },
   { label: "Events", href: "https://hackathons.hackclub.com" },
-  { label: "Domains", dropdown: resources },
+  { label: "Resources", dropdown: resources },
   // { label: "Donate", href: "/philanthropy" },
 ];
 
