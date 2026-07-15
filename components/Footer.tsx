@@ -212,7 +212,7 @@ export function Footer() {
               display: "inline-block",
             }}
           >
-            +91 95998 90446 (call toll-free)
+            openlake@iitbhilai.ac.in
           </a>
           <div style={{ display: "flex", gap: 12 }}>
             {icons.map((i) => (
