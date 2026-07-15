@@ -20,7 +20,11 @@ const sectionHeadingStyles = {
   marginBottom: 16,
   lineHeight: 1.2,
 } as const;
-const u = { color: "var(--paper)", textDecoration: "underline", textUnderlineOffset: 2 } as const;
+const u = {
+  color: "var(--paper)",
+  textDecoration: "underline",
+  textUnderlineOffset: 2,
+} as const;
 
 const hcLinks = [
   { label: "Philosophy", href: "/philosophy" },
@@ -45,10 +49,18 @@ const resLinks = [
 ];
 
 const icons = [
-  { label: "GitHub", href: "https://github.com/hackclub", glyph: "github" },
-  { label: "YouTube", href: "https://www.youtube.com/c/HackClubHQ", glyph: "youtube" },
-  { label: "Instagram", href: "https://www.instagram.com/starthackclub", glyph: "instagram" },
-  { label: "Email", href: "mailto:team@hackclub.com", glyph: "email" },
+  { label: "GitHub", href: "https://github.com/OpenLake", glyph: "github" },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@openlakeiitbhilai1724",
+    glyph: "youtube",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/openlake_iitbhilai/",
+    glyph: "instagram",
+  },
+  { label: "Email", href: "mailto:openlake@iitbhilai.ac.in", glyph: "email" },
 ];
 
 const sha = process.env.NEXT_PUBLIC_COMMIT_SHA ?? "dev";
@@ -57,7 +69,13 @@ function isExternal(href: string) {
   return href.startsWith("http");
 }
 
-function LinkCol({ title, links }: { title: string; links: { label: string; href: string }[] }) {
+function LinkCol({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
   return (
     <div style={title === "Resources" ? { minWidth: 140 } : undefined}>
       <p style={sectionHeadingStyles}>{title}</p>
@@ -84,7 +102,11 @@ function LinkCol({ title, links }: { title: string; links: { label: string; href
                 {l.label}
               </a>
             ) : (
-              <Link href={l.href} className="footer-link" style={footerLinkStyles}>
+              <Link
+                href={l.href}
+                className="footer-link"
+                style={footerLinkStyles}
+              >
                 {l.label}
               </Link>
             )}
@@ -116,7 +138,7 @@ export function Footer() {
     >
       <Image
         className="site-footer-illustration"
-        src="/assets/footer.webp"
+        src="/assets/footer3.png"
         alt=""
         width={680}
         height={558}
@@ -145,12 +167,18 @@ export function Footer() {
         }}
       >
         <div
-          style={{ display: "flex", flexDirection: "column", gap: 0, flexShrink: 0, width: 280 }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 0,
+            flexShrink: 0,
+            width: 280,
+          }}
         >
           <div style={{ marginBottom: 28 }}>
             <Link href="/">
               <Image
-                src="/assets/hackClubFlag.svg"
+                src="/assets/openlake.svg"
                 alt="Hack Club"
                 width={200}
                 height={70}
@@ -168,7 +196,7 @@ export function Footer() {
               lineHeight: 1.2,
             }}
           >
-            For teens, by teens.
+            Turning ideas into open source.
           </p>
           <a
             href="tel:18556254225"
@@ -184,7 +212,7 @@ export function Footer() {
               display: "inline-block",
             }}
           >
-            1-855-625-HACK (call toll-free)
+            openlake@iitbhilai.ac.in
           </a>
           <div style={{ display: "flex", gap: 12 }}>
             {icons.map((i) => (
@@ -214,7 +242,7 @@ export function Footer() {
           </div>
         </div>
         <div style={{ display: "flex", gap: 48, flexWrap: "wrap" }}>
-          <LinkCol title="Hack Club" links={hcLinks} />
+          <LinkCol title="OpenLake" links={hcLinks} />
           <LinkCol title="Resources" links={resLinks} />
         </div>
       </div>
@@ -233,33 +261,19 @@ export function Footer() {
       >
         <p
           style={{
+            flex: 1,
+            textAlign: "center",
             fontWeight: 400,
             fontSize: 16,
             color: "var(--paper)",
             opacity: 0.8,
             margin: 0,
             lineHeight: 1.5,
+            marginLeft: '100px'
           }}
         >
-          © {year} Hack Club. Registered under{" "}
-          <a
-            href="https://the.hackfoundation.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={u}
-          >
-            The Hack Foundation
-          </a>
-          , a 501(c)(3) nonprofit (EIN: 81-2908499).
-          {` Commit ${sha}`}, open source at{" "}
-          <a
-            href="https://github.com/hackclub/site"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={u}
-          >
-            hackclub/site
-          </a>
+          © 2026 OpenLake. Built with ❤️ by students at IIT Bhilai. Open source
+          on GitHub.
         </p>
         <ThemeToggle variant="footer" />
       </div>

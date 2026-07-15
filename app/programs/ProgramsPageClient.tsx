@@ -10,6 +10,294 @@ import type { AirtableProgram } from "../../lib/programs";
 import { getProgramStatus, parseLocalDate } from "../../lib/programs";
 import { BtnArrowSvg } from "../../components/landing/btn-arrow";
 
+import projectImg from "../../public/assets/project1.webp"
+
+// ════════════════════════════════════════════════════════════════════════════
+//  EDIT ME: your programs live here. Copy a block, paste it, change the values.
+//  You should never need to touch anything below this array.
+//
+//  Field reference (everything is optional except id / name / dates):
+//    id           - unique string, any value, just don't repeat it
+//    name         - shown as the title (ignored if you set site.logoUrl)
+//    startDate    - "YYYY-MM-DD". If in the future, card shows "Coming soon"
+//    endDate      - "YYYY-MM-DD". If in the past, card shows "Ended"
+//    websiteUrl   - the CTA button links here (button hidden if omitted)
+//    site.description        - the paragraph under the title
+//    site.projectImageUrl    - a normal picture shown inside the card (under title)
+//    site.projectImageHeight - height of that picture in px (default 150)
+//    site.logoUrl            - image shown instead of the title text
+//    site.logoSize           - logo height in px (default 48)
+//    site.bgType / bgImageUrl - set bgType:"image" + bgImageUrl for a bg photo
+//    site.bgColor / textColor / accentColor - card colors
+//    site.format             - "In-Person Only" | "Online Only" | "Both"
+//    site.projectTypes       - array from your ProjectType options
+//    site.inPersonStart / inPersonEnd / inPersonLocation - "YYYY-MM-DD" + place
+//    site.additionalRequirements - extra italic line of text
+//    site.slackChannel       - e.g. "#my-channel"
+//    site.pinned             - true keeps the card at the top with a pin badge
+//    site.buttonColor / buttonTextColor / buttonBorderRadius
+//    site.buttonBorderWidth / buttonBorderColor - CTA button styling
+// ════════════════════════════════════════════════════════════════════════════
+const PROGRAMS: AirtableProgram[] = [
+  {
+    id: "1",
+    name: "Student Database COSA",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/Student_Database_COSA",
+    site: {
+      description: "A weekend build sprint where members ship a small open-source tool together.",
+      projectImageUrl: "/assets/ProjectImg2.png", // ← Ripple's image goes here, e.g. "/assets/ripple.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null, // set to an image URL to show a logo instead of the title
+      logoSize: 48,
+      bgType: "color", // "color" or "image"
+      bgImageUrl: null, // used only when bgType is "image"
+      bgColor: "#0a1f1c",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Both", // "In-Person Only" | "Online Only" | "Both"
+      projectTypes: [], // e.g. ["Hardware", "Software"] — must match your ProjectType options
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#ripple",
+      pinned: true,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+  {
+    id: "2",
+    name: "Smart Insti App",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/Smart-Insti-App",
+    site: {
+      description: "A deep-dive series on systems programming, taught project-by-project.",
+      projectImageUrl: "/assets/ProjectImg3.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#0d2b26",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Online Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#depths",
+      pinned: false,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+  {
+    id: "3",
+    name: "Leaderboard Pro",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/Leaderboard-Pro",
+    site: {
+      description: "An in-person hack night at IIT Bhilai for prototyping wild ideas overnight.",
+      projectImageUrl: "/assets/ProjectImg4.png", // ← Current's image goes here, e.g. "/assets/current.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#08201d",
+      textColor: "#e0fffa",
+      accentColor: "#2dd4bf",
+      format: "In-Person Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: "IIT Bhilai",
+      additionalRequirements: null,
+      slackChannel: "#current",
+      pinned: false,
+      buttonColor: "#2dd4bf",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+    {
+    id: "4",
+    name: "CCPS Portal",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/Centre-for-Career-Planning-and-Services-Portal",
+    site: {
+      description: "A deep-dive series on systems programming, taught project-by-project.",
+      projectImageUrl: "/assets/ProjectImg5.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#0d2b26",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Online Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#depths",
+      pinned: false,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+    {
+    id: "5",
+    name: "Cannonforces",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/canonforces",
+    site: {
+      description: "A deep-dive series on systems programming, taught project-by-project.",
+      projectImageUrl: "/assets/ProjectImg6.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#0d2b26",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Online Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#depths",
+      pinned: false,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+    {
+    id: "6",
+    name: "Rate My Course",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/RateMyCourse",
+    site: {
+      description: "A deep-dive series on systems programming, taught project-by-project.",
+      projectImageUrl: "/assets/ProjectImg7.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#0d2b26",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Online Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#depths",
+      pinned: false,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+    {
+    id: "7",
+    name: "Cammpus MarketPlace",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/Campus-Marketplace",
+    site: {
+      description: "A deep-dive series on systems programming, taught project-by-project.",
+      projectImageUrl: "/assets/ProjectImg8.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#0d2b26",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Online Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#depths",
+      pinned: false,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+    {
+    id: "8",
+    name: "Bhilaee Simulator",
+    startDate: "2025-01-01",
+    endDate: "2026-12-31",
+    websiteUrl: "https://github.com/OpenLake/bhilaee-simulator",
+    site: {
+      description: "A deep-dive series on systems programming, taught project-by-project.",
+      projectImageUrl: "/assets/ProjectImg9.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
+      projectImageHeight: 150, // height of the picture in px
+      logoUrl: null,
+      logoSize: 48,
+      bgType: "color",
+      bgImageUrl: null,
+      bgColor: "#0d2b26",
+      textColor: "#e0fffa",
+      accentColor: "#22d3ee",
+      format: "Online Only",
+      projectTypes: [],
+      inPersonStart: null,
+      inPersonEnd: null,
+      inPersonLocation: null,
+      additionalRequirements: null,
+      slackChannel: "#depths",
+      pinned: false,
+      buttonColor: "#22d3ee",
+      buttonTextColor: "#04110f",
+      buttonBorderRadius: 44,
+      buttonBorderWidth: 0,
+      buttonBorderColor: "#e0fffa",
+    },
+  },
+  // ── Copy the block above, paste it here, and change the values ──
+] as unknown as AirtableProgram[];
+
 function ProgramCard({ program }: { program: AirtableProgram }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const now = new Date();
@@ -36,6 +324,10 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
   const projectTypes = s?.projectTypes ?? [];
   const format = s?.format ?? null;
   const description = s?.description ?? null;
+  // Project image = a normal picture shown inside the card, under the title.
+  // (Cast to any because these are custom fields not in the original type.)
+  const projectImageUrl = (s as any)?.projectImageUrl ?? null;
+  const projectImageHeight = (s as any)?.projectImageHeight ?? 150;
 
   const badgeLabel = isDraft
     ? "Coming soon"
@@ -181,6 +473,25 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
           </h2>
         )}
 
+        {/* Project image (a normal picture inside the card) */}
+        {projectImageUrl && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={projectImageUrl}
+            alt={program.name}
+            style={{
+              position: "relative",
+              zIndex: 1,
+              width: "100%",
+              height: projectImageHeight,
+              objectFit: "cover",
+              borderRadius: 12,
+              marginBottom: 12,
+              display: "block",
+            }}
+          />
+        )}
+
         {/* Description */}
         {description && (
           <p
@@ -279,7 +590,6 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
               paddingRight: 110,
             }}
           >
-            Join the discussion in{" "}
             <a
               href={slackUrl ?? "#"}
               target="_blank"
@@ -291,38 +601,11 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
                 whiteSpace: "nowrap",
               }}
             >
-              #{slackChannel.replace(/^#/, "")}
             </a>
           </p>
         )}
 
-        {/* Badge */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            height: 36,
-            width: 130,
-            background: badgeEnded ? "var(--surface-hover)" : "var(--red)",
-            borderTopLeftRadius: 8,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontWeight: "bold",
-              fontSize: 16,
-              color: badgeEnded ? "var(--foreground)" : "var(--paper)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            {badgeLabel}
-          </span>
-        </div>
+      
       </div>
     </div>
   );
@@ -603,11 +886,15 @@ export default function ProgramsPage({
 }) {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SortOption>("deadline-asc");
-  const [statusFilter, setStatusFilter] = useState<Set<StatusOption>>(new Set(["ongoing"]));
+  const [statusFilter, setStatusFilter] = useState<Set<StatusOption>>(new Set());
   const [formatFilter, setFormatFilter] = useState<Set<ProgramFormat>>(new Set());
   const [typeFilter, setTypeFilter] = useState<Set<ProjectType>>(new Set());
-  const [programs, setPrograms] = useState<AirtableProgram[] | null>(initialPrograms);
-  const [error, setError] = useState<string | null>(null);
+  // Hardcoded source: use the passed-in list only if it actually has items,
+  // otherwise fall back to the PROGRAMS array above. (An empty array is NOT
+  // caught by ??, so we check .length explicitly.)
+  const [programs] = useState<AirtableProgram[]>(
+    initialPrograms && initialPrograms.length > 0 ? initialPrograms : PROGRAMS,
+  );
   const sortRef = useRef<HTMLDivElement>(null);
   const [sortOpen, setSortOpen] = useState(false);
   const [sortMounted, setSortMounted] = useState(false);
@@ -670,18 +957,6 @@ export default function ProgramsPage({
       clearSortTimers();
     };
   }, [clearSortTimers, closeSortPanel]);
-
-  useEffect(() => {
-    if (initialPrograms !== null) return;
-
-    fetch("/api/programs")
-      .then((r) => r.json())
-      .then((data) => {
-        if (Array.isArray(data)) setPrograms(data);
-        else setError(data.error ?? "Failed to load programs");
-      })
-      .catch(() => setError("Network error — could not load programs"));
-  }, [initialPrograms]);
 
   const filtered = (programs ?? []).filter((p) => {
     const q = search.toLowerCase();
@@ -806,7 +1081,7 @@ export default function ProgramsPage({
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/assets/bgFade.svg"
+        src="/assets/bgFade2.svg"
         alt=""
         style={{
           position: "absolute",
@@ -823,7 +1098,7 @@ export default function ProgramsPage({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         ref={magazineBgRef}
-        src="/assets/background.webp"
+        src="/assets/background.png"
         alt=""
         style={{
           position: "absolute",
@@ -863,7 +1138,7 @@ export default function ProgramsPage({
             margin: "40px 0 16px",
           }}
         >
-          Programs @ OpenLake
+          Projects @ OpenLake
         </h1>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <p
@@ -874,31 +1149,7 @@ export default function ProgramsPage({
               margin: "0 0 4px",
             }}
           >
-            Every event below is free and open to any teen, over the world. Yes, you can go!
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              margin: 0,
-            }}
-          >
-            (Check out our program documentary videos{" "}
-            <a
-              href="https://www.youtube.com/@HackClubHQ/videos"
-              target="_blank"
-              style={{ color: "#ec3750", textDecoration: "none" }}
-            >
-              on YouTube
-              <span
-                aria-hidden="true"
-                style={{ display: "inline-flex", verticalAlign: "middle", marginLeft: 2 }}
-              >
-                <BtnArrowSvg />
-              </span>
-            </a>
-            )
+            We always strive towards the benefit of society with our projects.
           </p>
         </div>
 
@@ -949,7 +1200,7 @@ export default function ProgramsPage({
         </div>
 
         {/* Filters */}
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexWrap: "wrap",
@@ -958,7 +1209,7 @@ export default function ProgramsPage({
             alignItems: "center",
           }}
         >
-          {/* Sort dropdown */}
+          Sort dropdown
           <div ref={sortRef} style={{ position: "relative", display: "inline-block" }}>
             <button
               onClick={() => (sortOpen ? closeSortPanel() : openSortPanel())}
@@ -1033,7 +1284,7 @@ export default function ProgramsPage({
             )}
           </div>
 
-          {/* Status */}
+          Status
           <PillDropdown
             label={statusLabel}
             active={statusFilter.size > 0}
@@ -1049,7 +1300,7 @@ export default function ProgramsPage({
             ))}
           </PillDropdown>
 
-          {/* Format */}
+          Format
           <PillDropdown
             label={formatLabel}
             active={formatFilter.size > 0}
@@ -1065,7 +1316,7 @@ export default function ProgramsPage({
             ))}
           </PillDropdown>
 
-          {/* Project type */}
+          Project type
           <PillDropdown
             label={typeLabel}
             active={typeFilter.size > 0}
@@ -1080,46 +1331,16 @@ export default function ProgramsPage({
               />
             ))}
           </PillDropdown>
-        </div>
-
-        {error && (
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              color: "#ec3750",
-              fontSize: 16,
-              textAlign: "center",
-              marginBottom: 32,
-            }}
-          >
-            {error}
-          </p>
-        )}
+        </div> */}
 
         <div
           className="programs-grid"
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}
         >
-          {programs === null
-            ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
-            : sorted.map((p) => <ProgramCard key={p.id} program={p} />)}
+          {sorted.map((p) => (
+            <ProgramCard key={p.id} program={p} />
+          ))}
         </div>
-
-        {programs !== null && sorted.length === 0 && (
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              opacity: 0.5,
-              textAlign: "center",
-              marginTop: 40,
-            }}
-          >
-            No programs found{search ? ` matching "${search}"` : ""}.
-          </p>
-        )}
-
         {/* Footer */}
         <div
           style={{
@@ -1139,16 +1360,13 @@ export default function ProgramsPage({
               margin: 0,
             }}
           >
-            Looking for more? Our community plans and ideates in the{" "}
             <a
               href="https://slack.hackclub.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#ec3750", textDecoration: "none" }}
             >
-              Slack
             </a>
-            , where new events are being announced all the time.
           </p>
           <p
             style={{
@@ -1159,11 +1377,8 @@ export default function ProgramsPage({
               margin: 0,
             }}
           >
-            You can also{" "}
             <Link href="/programs/edit" style={{ color: "#ec3750", textDecoration: "none" }}>
-              edit an event here
             </Link>
-            .
           </p>
         </div>
       </div>

@@ -398,7 +398,7 @@ export function HeroSection() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        background: "linear-gradient(180deg, rgba(236,55,80,0.04) 60%, rgba(236,55,80,0.40) 100%)",
+        background: "linear-gradient(180deg, rgba(236,55,80,0.04) 60%, #28a9e2 100%)",
       }}
     >
       {/*
@@ -438,7 +438,7 @@ export function HeroSection() {
           }}
         >
           <Image
-            src="/assets/background.webp"
+            src="/assets/background3.png"
             alt=""
             width={1920}
             height={840}
@@ -711,7 +711,7 @@ export function HeroSection() {
           content: '';
           position: absolute;
           inset: 0;
-          background: #ec3750;
+          background: #395eda;
           transform: translateX(-101%);
           z-index: -1;
         }
@@ -737,7 +737,7 @@ export function HeroSection() {
       >
         {/* Stardance link */}
         <a
-          href="https://stardance.hackclub.com/hackclubsite"
+          href="https://fossunited.org/"
           target="_blank"
           rel="noopener"
           className="mag-link hero-mag-link"
@@ -773,7 +773,7 @@ export function HeroSection() {
             height={222}
             style={{ width: 18, height: "auto", display: "block", flexShrink: 0 }}
           />
-          {"Check out Stardance, the largest free STEM event of the summer"}
+          {"Check out FOSS United, India's largest open-source ecosystem."}
           <span className="btn-arrow" aria-hidden="true">
             <BtnArrowSvg />
           </span>

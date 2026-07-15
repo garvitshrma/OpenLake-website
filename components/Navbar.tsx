@@ -9,7 +9,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const about = [
   { label: "Philosophy", href: "/philosophy" },
   { label: "Community", href: "/team" },
-  { label: "Newsletter", href: "/team" },
+  { label: "Newsletter", href: "/newsletterpage" },
 ];
 
 const resources = [
@@ -25,9 +25,9 @@ const links = [
   // { label: "Projects", href: "/projects" },
   { label: "Projects", href: "/programs" },
   // { label: "Clubs", href: "/clubs" },
-  { label: "Events", href: "/newevents" },
-  { label: "Domains", dropdown: resources },
-  { label: "Donate", href: "/philanthropy" },
+  { label: "Events", href: "https://hackathons.hackclub.com" },
+  { label: "Resources", dropdown: resources },
+  // { label: "Donate", href: "/philanthropy" },
 ];
 
 const F = "var(--font-phantom)";
@@ -363,7 +363,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
           <ThemeToggle />
 
           <a
-            href="https://slack.hackclub.com"
+            href="https://discord.gg/A2J9z92qzd"
             className="dark-btn nav-cta"
             style={{
               fontFamily: F,

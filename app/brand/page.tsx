@@ -515,7 +515,7 @@ export default function BrandPage() {
           font-family: var(--font-phantom);
           font-size: 0.8rem;
           font-weight: 700;
-          color: #ec3750;
+          color: #37a0ec;
           text-decoration: none;
           border-radius: 999px;
           padding: 5px 12px;

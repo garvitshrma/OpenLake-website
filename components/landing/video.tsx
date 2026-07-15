@@ -56,7 +56,7 @@ export function VideoSection() {
         }}
       >
         <img
-          src="https://cdn.hackclub.com/019db857-4b48-7633-9df8-a4b335a251ef/bigCollage.webp"
+          src="/assets/backImg.png"
           alt=""
           width={1920}
           height={1280}

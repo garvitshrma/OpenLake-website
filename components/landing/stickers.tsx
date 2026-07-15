@@ -105,7 +105,7 @@ export function StickerEnvelopeLink() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/hackClubFlag.svg"
+                src="/assets/openlake.svg"
                 alt=""
                 style={{ width: "82%", height: "auto", display: "block" }}
               />
@@ -162,7 +162,7 @@ export function StickerEnvelopeLink() {
               TO:
             </span>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, a teenager</div>
+              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, an IITian</div>
               <div
                 style={{
                   borderBottom: "1.2px solid rgba(23,23,29,0.35)",
