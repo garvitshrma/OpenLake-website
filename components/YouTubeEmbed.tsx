@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-export function YouTubeEmbed({ id, title = "Hack Club video" }: { id: string; title?: string }) {
+export function YouTubeEmbed({ id, title = "OpenLake video" }: { id: string; title?: string }) {
   const [isMounted, setIsMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
