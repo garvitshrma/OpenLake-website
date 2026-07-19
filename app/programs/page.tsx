@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import ProgramsPageClient from "./ProgramsPageClient";
 import { buildPageMetadata } from "@/lib/seo";
-import { fetchPrograms, hasKey } from "@/lib/programs-data";
+import { fetchGitHubPrograms } from "@/lib/github-programs";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Programs — Hack Club",
+  title: "Projects — OpenLake",
   description:
-    "Explore Hack Club programs — coding projects, events, and opportunities for teen makers.",
+    "Open-source projects built by OpenLake, IIT Bhilai's open-source club.",
   canonical: "/programs",
 });
 
-export default async function ProgramsPage() {
-  const programs = hasKey() ? await fetchPrograms() : [];
+// Re-check GitHub for new repos at most once an hour.
+export const revalidate = 3600;
 
+export default async function ProgramsPage() {
+  const programs = await fetchGitHubPrograms();
+  // If GitHub is unreachable, programs is null and ProgramsPageClient
+  // falls back to its built-in PROGRAMS list.
   return <ProgramsPageClient initialPrograms={programs} />;
 }
