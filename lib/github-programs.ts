@@ -1,6 +1,27 @@
 import type { AirtableProgram } from "./programs";
 
 // One shared look for every fetched project card.
+
+const CUSTOM_IMAGES: Record<string, string> = {
+  "openlake-website": "/assets/openlake-website.png",
+  "Student_Database_COSA": "/assets/cosa.png",
+  "canonforces": "/assets/cannonforces.png",
+  "Centre-for-Career-Planning-and-Services-Portal": "/assets/ccps.png",
+  "RateMyCourse": "/assets/rate-my-course.png",
+  "Campus-Marketplace": "/assets/buy-and-sell.png",
+  "bhilaee-labs": "/assets/bhilaee-labs.png",
+  "Leaderboard-Pro": "/assets/leaderboard-pro.png",
+  "Smart-Insti-App": "/assets/insti-app.png",
+  "WatchParty": "/assets/watchparty.png",
+  "Knowledge-Sharing-Platform": "/assets/ksp.png",
+  "iitbh-cgpa": "/assets/iitbh-cgpa.jpg",
+  "Homework-Scheduler": "/assets/homework-scheduler.png",
+  "SciTech_council_website": "/assets/scitech-website.png",
+  "canonforces": "/assets/cannonforces.png",
+  "canonforces": "/assets/cannonforces.png",
+};
+
+
 const CARD_THEME = {
   logoUrl: null,
   logoSize: 48,
@@ -48,7 +69,9 @@ function mapRepo(repo: GitHubRepo): AirtableProgram {
     websiteUrl: homepage ? homepage : repo.html_url,
     site: {
       description: repo.description ?? "An open-source project by OpenLake.",
-      projectImageUrl: `https://opengraph.githubassets.com/1/OpenLake/${repo.name}`,
+      projectImageUrl:
+        CUSTOM_IMAGES[repo.name] ??
+        `https://opengraph.githubassets.com/1/OpenLake/${repo.name}`,
       projectImageHeight: 150,
       pinned: false,
       ...CARD_THEME,
