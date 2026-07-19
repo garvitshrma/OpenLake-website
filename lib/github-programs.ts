@@ -17,8 +17,6 @@ const CUSTOM_IMAGES: Record<string, string> = {
   "iitbh-cgpa": "/assets/iitbh-cgpa.jpg",
   "Homework-Scheduler": "/assets/homework-scheduler.png",
   "SciTech_council_website": "/assets/scitech-website.png",
-  "canonforces": "/assets/cannonforces.png",
-  "canonforces": "/assets/cannonforces.png",
 };
 
 
