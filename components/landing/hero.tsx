@@ -792,7 +792,7 @@ export function HeroSection() {
             textAlign: "center",
           }}
         >
-          {"Where "}
+          {"Build "}
           <span
             style={{
               background:
@@ -804,10 +804,10 @@ export function HeroSection() {
               animation: "teens-gradient 6s linear infinite",
             }}
           >
-            IITians
+            products
           </span>
           <br />
-          {"make cool stuff."}
+          {"that matter."}
         </h1>
 
         {/* Subtext */}
