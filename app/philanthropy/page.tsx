@@ -300,7 +300,7 @@ export default function PhilanthropyPage() {
               />
             </div>
             <div className="philanthropy-collage__frame philanthropy-collage__frame--sticker">
-              <Image src="/assets/hero_sticker3.webp" alt="" fill sizes="88px" />
+              <Image src="/assetsopenlake.svg" alt="" fill sizes="88px" />
             </div>
           </div>
         </div>

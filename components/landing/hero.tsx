@@ -644,7 +644,7 @@ export function HeroSection() {
       {/* ── STICKERS — draggable, outside overflow clip, hidden on mobile ── */}
       <div className="hero-stickers">
         <DraggableSticker
-          src="/assets/hero_sticker1.webp"
+          src="/assets/openlake.svg"
           initialLeft="calc(75 / 1920 * 100vw)"
           initialTop="calc(266 / 1080 * 100vh)"
           rotate={18}
@@ -652,7 +652,7 @@ export function HeroSection() {
           sizes="(max-width: 1023px) 0px, 7.35vw"
         />
         <DraggableSticker
-          src="/assets/hero_sticker2.webp"
+          src="/assets/openlake.svg"
           initialLeft="calc(215 / 1920 * 100vw)"
           initialTop="calc(663 / 1080 * 100vh)"
           rotate={-24}
@@ -660,7 +660,7 @@ export function HeroSection() {
           sizes="(max-width: 1023px) 0px, 3.39vw"
         />
         <DraggableSticker
-          src="/assets/hero_sticker3.webp"
+          src="/assets/openlake.svg"
           initialLeft="calc(300 / 1920 * 100vw)"
           initialTop="calc(768 / 1080 * 100vh)"
           rotate={13}
@@ -668,7 +668,7 @@ export function HeroSection() {
           sizes="(max-width: 1023px) 0px, 4.22vw"
         />
         <DraggableSticker
-          src="/assets/hero_sticker7.webp"
+          src="/assets/openlake.svg"
           initialRight="calc(100 / 1920 * 100vw)"
           initialTop="calc(285 / 1080 * 100vh)"
           rotate={-16}
@@ -676,7 +676,7 @@ export function HeroSection() {
           sizes="(max-width: 1023px) 0px, 5.83vw"
         />
         <DraggableSticker
-          src="/assets/hero_sticker5.webp"
+          src="/assets/openlake.svg"
           initialRight="calc(155 / 1920 * 100vw)"
           initialTop="calc(528 / 1080 * 100vh)"
           rotate={22}
@@ -684,7 +684,7 @@ export function HeroSection() {
           sizes="(max-width: 1023px) 0px, 4.64vw"
         />
         <DraggableSticker
-          src="/assets/hero_sticker6.webp"
+          src="/assets/openlake.svg"
           initialRight="calc(280 / 1920 * 100vw)"
           initialTop="calc(767 / 1080 * 100vh)"
           rotate={-9}
@@ -828,9 +828,6 @@ export function HeroSection() {
         </p>
 
         {/* Email signup */}
-        <div style={{ pointerEvents: "auto" }}>
-          <EmailSignupInput variant="hero" />
-        </div>
 
         {/* Italic subtext */}
         {/* <p

@@ -3,13 +3,13 @@
 import Image from "next/image";
 
 const STICKER_FORM_URL =
-  "https://forms.hackclub.com/t/eLhFehpKG6us?utm_campaign=hackclub_com&r=hackclub_com";
+  "https://openlake.in";
 
 const FLY_STICKERS = [
-  { src: "/assets/hero_sticker1.webp", className: "sf-kawaii", w: 160, h: 99 },
-  { src: "/assets/hero_sticker3.webp", className: "sf-yippee", w: 97, h: 100 },
-  { src: "/assets/hero_sticker4.webp", className: "sf-coke", w: 120, h: 64 },
-  { src: "/assets/hero_sticker7.webp", className: "sf-boba", w: 96, h: 120 },
+  { src: "/assets/openlake.svg", className: "sf-kawaii", w: 160, h: 99 },
+  { src: "/assets/openlake.svg", className: "sf-yippee", w: 97, h: 100 },
+  { src: "/assets/openlake.svg", className: "sf-coke", w: 120, h: 64 },
+  { src: "/assets/openlake.svg", className: "sf-boba", w: 96, h: 120 },
 ] as const;
 
 /**
@@ -73,9 +73,9 @@ export function StickerEnvelopeLink() {
               whiteSpace: "nowrap",
             }}
           >
-            HACK CLUB HQ
+            OPENLAKE HQ
             <br />
-            BURLINGTON, VT
+            BHILAI, INDIA
           </div>
 
           {/* Stamp — red with white Hack Club flag */}
@@ -162,7 +162,7 @@ export function StickerEnvelopeLink() {
               TO:
             </span>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, an IITian</div>
+              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, a programmer</div>
               <div
                 style={{
                   borderBottom: "1.2px solid rgba(23,23,29,0.35)",

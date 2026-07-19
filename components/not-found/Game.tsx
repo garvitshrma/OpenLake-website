@@ -379,7 +379,7 @@ export function Game() {
             >
               <div className="game-ship__trail" />
               <Image
-                src="/assets/hero_sticker11.webp"
+                src="/assets/openlake.svg"
                 alt=""
                 width={1218}
                 height={1356}
