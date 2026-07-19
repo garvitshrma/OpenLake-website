@@ -298,14 +298,12 @@ export default function TeamPageClient({
         <div className="team-shell team-hero__inner">
           <div className="team-hero__copy">
             <h1 className="team-hero__title">
-              By teenagers,
+              Open source,
               <br />
-              for teenagers.
+               open to all.
             </h1>
             <p className="team-hero__lede">
-              Hack Club runs on a mix of staff, gap years, and teen contributors
-              building programs, infrastructure, community rituals, and helping
-              with the day-to-day magic behind the scenes.
+              OpenLake runs on curious students building projects, mentoring fellow developers, contributing to open source, organizing events, and creating opportunities for everyone to learn and grow.
             </p>
           </div>
         </div>
