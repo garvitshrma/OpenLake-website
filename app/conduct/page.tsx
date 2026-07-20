@@ -5,6 +5,8 @@ import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
 import AppDevHero from "../../components/conduct/AppDevHero";
 import ResourceSection from "../../components/conduct/ResourceSection";
+import { ThemeLock } from "@/components/ThemeToggle";
+
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Code of Conduct — Hack Club",
@@ -16,6 +18,7 @@ export default function ConductPage() {
   const content = fs.readFileSync(path.join(process.cwd(), "content/conduct.md"), "utf-8");
   return (
   <>
+    <ThemeLock />
     <AppDevHero />
     <ResourceSection />
     <MarkdownPage content={content} />
