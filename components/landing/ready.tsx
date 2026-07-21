@@ -8,8 +8,8 @@ export function ReadySection() {
       style={{
         position: "relative",
         background: "var(--surface)",
-        paddingTop: "clamp(80px, 15vw, 192px)",
-        paddingBottom: "clamp(60px, 10vw, 120px)",
+        paddingTop: "clamp(40px, 8vw, 80px)",
+        paddingBottom: "clamp(40px, 6vw, 60px)",
         paddingLeft: 24,
         paddingRight: 24,
         textAlign: "center",
@@ -28,7 +28,7 @@ export function ReadySection() {
         }}
       >
         {/* "Ready?" headline */}
-        <h2
+        {/* <h2
           style={{
             fontFamily: "var(--font-zarathustra)",
             fontWeight: 400,
@@ -39,10 +39,10 @@ export function ReadySection() {
           }}
         >
           Ready?
-        </h2>
+        </h2> */}
 
         {/* Email pill */}
-        <EmailSignupInput variant="ready" />
+        {/* <EmailSignupInput variant="ready" /> */}
 
         {/* "Get started" body copy */}
         <p

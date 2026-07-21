@@ -108,9 +108,9 @@ function BoardCard({
       <Image
         src={img}
         alt={name}
-        width={96}
-        height={96}
-        sizes="96px"
+        width={180}
+        height={180}
+        sizes="180px"
         className="board-card__avatar"
       />
       <p className="board-card__name">{name}</p>
@@ -138,13 +138,13 @@ function BoardCard({
       >
         {github && (
           <a href={github} target="_blank" rel="noopener noreferrer">
-            <FaGithub size={20} />
+            <FaGithub size={26} />
           </a>
         )}
 
         {linkedin && (
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={20} />
+            <FaLinkedin size={26} />
           </a>
         )}
       </div>
@@ -298,14 +298,16 @@ export default function TeamPageClient({
         <div className="team-shell team-hero__inner">
           <div className="team-hero__copy">
             <h1 className="team-hero__title">
-              By teenagers,
+              Meet the
               <br />
-              for teenagers.
+              Present Community.
             </h1>
+
             <p className="team-hero__lede">
-              Hack Club runs on a mix of staff, gap years, and teen contributors
-              building programs, infrastructure, community rituals, and helping
-              with the day-to-day magic behind the scenes.
+              Meet the passionate students, mentors, and contributors who are
+              actively shaping OpenLake today. Together, they organize events,
+              build projects, mentor learners, and strengthen our growing
+              community.
             </p>
           </div>
         </div>
@@ -1224,18 +1226,17 @@ export default function TeamPageClient({
         }
 
         .board-card__avatar {
-          width: 96px;
-          height: 96px;
+          width: 180px;
+          height: 180px;
           border-radius: 50%;
           object-fit: cover;
           flex-shrink: 0;
-          box-shadow: 0 8px 20px rgba(91, 52, 18, 0.14);
+          box-shadow: 0 12px 28px rgba(91, 52, 18, 0.16);
         }
-
         .board-card__name {
-          margin: 4px 0 0;
+          margin: 12px 0 4px;
           font-family: var(--font-phantom);
-          font-size: 1.1rem;
+          font-size: 1.45rem;
           font-weight: 700;
           line-height: 1.2;
           color: var(--foreground);
@@ -1244,7 +1245,7 @@ export default function TeamPageClient({
         .board-card__role {
           margin: 0;
           font-family: var(--font-phantom);
-          font-size: 0.9rem;
+          font-size: 1.1rem;
           color: var(--red);
           font-weight: 600;
         }
