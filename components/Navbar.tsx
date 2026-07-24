@@ -23,12 +23,9 @@ const resources = [
 
 const links = [
   { label: "About", dropdown: about },
-  // { label: "Projects", href: "/projects" },
   { label: "Projects", href: "/programs" },
-  // { label: "Clubs", href: "/clubs" },
-  { label: "Events", href: "https://hackathons.hackclub.com" },
+  { label: "Events", href: "/newevents" },
   { label: "Resources", dropdown: resources },
-  // { label: "Donate", href: "/philanthropy" },
 ];
 
 const F = "var(--font-phantom)";
@@ -264,7 +261,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
           >
             <Image
               src="/assets/openlake.svg"
-              alt="Hack Club"
+              alt="OpenLake"
               height={184}
               width={526}
               priority

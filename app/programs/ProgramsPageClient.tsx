@@ -344,8 +344,8 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
     s?.inPersonLocation ?? null,
   );
   if ((format === "In-Person Only" || format === "Both") && inPersonStr)
-    metaLines.push(`In-person: ${inPersonStr}`);
-  if (format === "Online Only") metaLines.push("Online-only");
+    metaLines.push("In-person & online");
+  if (format === "Online Only") metaLines.push("In-person & online");
   if (format === "Both" && !inPersonStr) metaLines.push("In-person & online");
   if (projectTypes.length > 0)
     metaLines.push(
