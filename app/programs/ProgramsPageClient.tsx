@@ -10,8 +10,6 @@ import type { AirtableProgram } from "../../lib/programs";
 import { getProgramStatus, parseLocalDate } from "../../lib/programs";
 import { BtnArrowSvg } from "../../components/landing/btn-arrow";
 
-import projectImg from "../../public/assets/project1.webp"
-
 // ════════════════════════════════════════════════════════════════════════════
 //  EDIT ME: your programs live here. Copy a block, paste it, change the values.
 //  You should never need to touch anything below this array.
@@ -47,17 +45,17 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Student_Database_COSA",
     site: {
       description: "A weekend build sprint where members ship a small open-source tool together.",
-      projectImageUrl: "/assets/ProjectImg2.png", // ← Ripple's image goes here, e.g. "/assets/ripple.png"
-      projectImageHeight: 150, // height of the picture in px
-      logoUrl: null, // set to an image URL to show a logo instead of the title
+      projectImageUrl: "/assets/ProjectImg2.png",
+      projectImageHeight: 150,
+      logoUrl: null,
       logoSize: 48,
-      bgType: "color", // "color" or "image"
-      bgImageUrl: null, // used only when bgType is "image"
+      bgType: "color",
+      bgImageUrl: null,
       bgColor: "#0a1f1c",
       textColor: "#e0fffa",
       accentColor: "#22d3ee",
-      format: "Both", // "In-Person Only" | "Online Only" | "Both"
-      projectTypes: [], // e.g. ["Hardware", "Software"] — must match your ProjectType options
+      format: "Both",
+      projectTypes: [],
       inPersonStart: null,
       inPersonEnd: null,
       inPersonLocation: null,
@@ -79,8 +77,8 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Smart-Insti-App",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg3.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg3.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -111,8 +109,8 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Leaderboard-Pro",
     site: {
       description: "An in-person hack night at IIT Bhilai for prototyping wild ideas overnight.",
-      projectImageUrl: "/assets/ProjectImg4.png", // ← Current's image goes here, e.g. "/assets/current.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg4.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -135,7 +133,7 @@ const PROGRAMS: AirtableProgram[] = [
       buttonBorderColor: "#e0fffa",
     },
   },
-    {
+  {
     id: "4",
     name: "CCPS Portal",
     startDate: "2025-01-01",
@@ -143,8 +141,8 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Centre-for-Career-Planning-and-Services-Portal",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg5.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg5.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -167,7 +165,7 @@ const PROGRAMS: AirtableProgram[] = [
       buttonBorderColor: "#e0fffa",
     },
   },
-    {
+  {
     id: "5",
     name: "Cannonforces",
     startDate: "2025-01-01",
@@ -175,8 +173,8 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/canonforces",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg6.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg6.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -199,7 +197,7 @@ const PROGRAMS: AirtableProgram[] = [
       buttonBorderColor: "#e0fffa",
     },
   },
-    {
+  {
     id: "6",
     name: "Rate My Course",
     startDate: "2025-01-01",
@@ -207,8 +205,8 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/RateMyCourse",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg7.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg7.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -231,16 +229,16 @@ const PROGRAMS: AirtableProgram[] = [
       buttonBorderColor: "#e0fffa",
     },
   },
-    {
+  {
     id: "7",
-    name: "Cammpus MarketPlace",
+    name: "Campus MarketPlace",
     startDate: "2025-01-01",
     endDate: "2026-12-31",
     websiteUrl: "https://github.com/OpenLake/Campus-Marketplace",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg8.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg8.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -263,7 +261,7 @@ const PROGRAMS: AirtableProgram[] = [
       buttonBorderColor: "#e0fffa",
     },
   },
-    {
+  {
     id: "8",
     name: "Bhilaee Simulator",
     startDate: "2025-01-01",
@@ -271,8 +269,8 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/bhilaee-simulator",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg9.png", // ← Depths' image goes here, e.g. "/assets/depths.png"
-      projectImageHeight: 150, // height of the picture in px
+      projectImageUrl: "/assets/ProjectImg9.png",
+      projectImageHeight: 150,
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
@@ -328,6 +326,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
   // (Cast to any because these are custom fields not in the original type.)
   const projectImageUrl = (s as any)?.projectImageUrl ?? null;
   const projectImageHeight = (s as any)?.projectImageHeight ?? 150;
+  const liveUrl = (s as any)?.liveUrl ?? null;
 
   const badgeLabel = isDraft
     ? "Coming soon"
@@ -504,6 +503,10 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
               opacity: 0.9,
               margin: "0 0 4px",
               lineHeight: 1.2,
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {description}
@@ -538,42 +541,86 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
         <div style={{ flex: "1 0 12px" }} />
 
         {/* CTA button */}
-        {program.websiteUrl && (
-          <a
-            href={program.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-btn"
-            style={{
-              position: "relative",
-              zIndex: 1,
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              paddingTop: 6,
-              paddingBottom: 6,
-              paddingLeft: 20,
-              paddingRight: 20,
-              background: buttonColor,
-              borderRadius: buttonRadius,
-              border: `${buttonBorderWidth}px solid ${buttonBorderColor}`,
-              fontFamily: "var(--font-phantom)",
-              fontWeight: "bold",
-              fontSize: 20,
-              color: buttonTextColor,
-              textDecoration: "none",
-              whiteSpace: "nowrap",
-              marginBottom: slackChannel ? 6 : 0,
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-          >
-            {buttonLabel}
-            <span className="btn-arrow" aria-hidden="true">
-              <BtnArrowSvg />
-            </span>
-          </a>
+          {/* CTA buttons */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 10,
+            marginBottom: slackChannel ? 6 : 0,
+          }}
+        >
+          {program.websiteUrl && (
+            <a
+              href={program.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                paddingTop: 6,
+                paddingBottom: 6,
+                paddingLeft: 20,
+                paddingRight: 20,
+                background: buttonColor,
+                borderRadius: buttonRadius,
+                border: `${buttonBorderWidth}px solid ${buttonBorderColor}`,
+                fontFamily: "var(--font-phantom)",
+                fontWeight: "bold",
+                fontSize: 20,
+                color: buttonTextColor,
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+            >
+              View on GitHub
+              <span className="btn-arrow" aria-hidden="true">
+                <BtnArrowSvg />
+              </span>
+            </a>
+          )}
+
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                paddingTop: 6,
+                paddingBottom: 6,
+                paddingLeft: 20,
+                paddingRight: 20,
+                background: "transparent",
+                borderRadius: buttonRadius,
+                border: `2px solid ${buttonColor}`,
+                fontFamily: "var(--font-phantom)",
+                fontWeight: "bold",
+                fontSize: 20,
+                color: buttonColor,
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+            >
+              See site
+              <span className="btn-arrow" aria-hidden="true">
+                <BtnArrowSvg />
+              </span>
+            </a>
+            
         )}
+         </div>
 
         {/* Slack channel */}
         {slackChannel && (
@@ -601,11 +648,10 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
                 whiteSpace: "nowrap",
               }}
             >
+              {slackChannel}
             </a>
           </p>
         )}
-
-      
       </div>
     </div>
   );
@@ -889,9 +935,9 @@ export default function ProgramsPage({
   const [statusFilter, setStatusFilter] = useState<Set<StatusOption>>(new Set());
   const [formatFilter, setFormatFilter] = useState<Set<ProgramFormat>>(new Set());
   const [typeFilter, setTypeFilter] = useState<Set<ProjectType>>(new Set());
-  // Hardcoded source: use the passed-in list only if it actually has items,
-  // otherwise fall back to the PROGRAMS array above. (An empty array is NOT
-  // caught by ??, so we check .length explicitly.)
+  // Use the passed-in list only if it actually has items, otherwise fall back
+  // to the PROGRAMS array above. (An empty array is NOT caught by ??, so we
+  // check .length explicitly.)
   const [programs] = useState<AirtableProgram[]>(
     initialPrograms && initialPrograms.length > 0 ? initialPrograms : PROGRAMS,
   );
@@ -1164,7 +1210,7 @@ export default function ProgramsPage({
             alignItems: "center",
             paddingLeft: 28,
             paddingRight: 28,
-            marginBottom: 20,
+            marginBottom: 32,
           }}
         >
           <svg
@@ -1199,7 +1245,7 @@ export default function ProgramsPage({
           />
         </div>
 
-        {/* Filters */}
+        {/* Filters (currently disabled) */}
         {/* <div
           style={{
             display: "flex",
@@ -1341,16 +1387,9 @@ export default function ProgramsPage({
             <ProgramCard key={p.id} program={p} />
           ))}
         </div>
+
         {/* Footer */}
-        <div
-          style={{
-            marginTop: 80,
-            display: "flex",
-            flexDirection: "column",
-            gap: 8,
-            textAlign: "center",
-          }}
-        >
+        <div style={{ marginTop: 80, textAlign: "center" }}>
           <p
             style={{
               fontFamily: "var(--font-phantom)",
@@ -1360,25 +1399,16 @@ export default function ProgramsPage({
               margin: 0,
             }}
           >
+            Want to contribute? Find these projects on{" "}
             <a
-              href="https://slack.hackclub.com"
+              href="https://github.com/orgs/OpenLake/repositories"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#ec3750", textDecoration: "none" }}
             >
+              GitHub
             </a>
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              opacity: 0.55,
-              margin: 0,
-            }}
-          >
-            <Link href="/programs/edit" style={{ color: "#ec3750", textDecoration: "none" }}>
-            </Link>
+            .
           </p>
         </div>
       </div>

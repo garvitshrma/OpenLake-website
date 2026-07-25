@@ -393,7 +393,7 @@ export default function TeamPageClient({
           <h2 className="board-section__title">Mentors</h2>
           <div className="board-grid board-grid--advisors">
             <BoardCard
-              img="/team/Garvit_Sharma.jpg"
+              img="/team/Garvit_Sharma2.jpg"
               name="Garvit Sharma"
               boardRole=""
               github="https://github.com/garvitshrma"
