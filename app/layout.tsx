@@ -18,11 +18,10 @@ const themesrc = `(function(){try{var s=localStorage.getItem('hc-site-theme'),t=
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Hack Club",
-  url: "https://hackclub.com",
+  name: "OpenLake",
+  url: "https://openlake.in",
   logo: "https://assets.hackclub.com/flag-standalone.png",
   sameAs: [
-    "https://twitter.com/hackclub",
     "https://github.com/OpenLake",
     "https://www.youtube.com/@openlakeiitbhilai1724",
     "https://www.instagram.com/openlake_iitbhilai/",
