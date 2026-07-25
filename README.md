@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="192" alt="OpenLake Logo" src="public/logo.png">
+  <img width="192" alt="OpenLake Logo" src="public/assets/openlake.svg">
 </p>
 
 <h1 align="center">OpenLake Website</h1>
