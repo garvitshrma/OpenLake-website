@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-export const SITE_NAME = "Hack Club";
+export const SITE_NAME = "OpenLake";
 export const SITE_TITLE = "OpenLake";
 export const SITE_DESCRIPTION =
   "Build. Learn. Contribute. OpenLake is IIT Bhilai's hub for open-source innovation and collaborative development.";
-export const SITE_URL = "https://hackclub.com";
+export const SITE_URL = "https://openlake.in";
 
 type PageMetadataInput = {
   title: string;
@@ -18,7 +18,7 @@ export function buildPageMetadata({
   title,
   description,
   canonical,
-  image = "https://cdn.hackclub.com/019db4df-dc7a-7270-94b5-df621a60c7ca/splash.png",
+  image = "/assets/openlake-website.png",
   imageAlt = SITE_NAME,
 }: PageMetadataInput): Metadata {
   return {
@@ -40,7 +40,7 @@ export function buildPageMetadata({
           height: 630,
           alt: imageAlt,
         },
-      ],
+      ],  
     },
     twitter: {
       card: "summary_large_image",
