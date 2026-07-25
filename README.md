@@ -1,27 +1,89 @@
-<p align="center"><img width="192" alt="OpenLake logo" src="https://assets.hackclub.com/flag-standalone.svg"></p>
-<h1 align="center">Hack Club's Site (v4)</h1>
+<p align="center">
+  <img width="192" alt="OpenLake Logo" src="public/logo.png">
+</p>
 
-This codebase powers the Hack Club website, which is built with [Next.js](https://nextjs.org/). You can view it live at [hackclub.com](https://hackclub.com/)
+<h1 align="center">OpenLake Website</h1>
 
-## Development
+<p align="center">
+  The official website for <strong>OpenLake</strong> — an open-source community where students learn, build, and ship impactful projects together.
+</p>
 
-1. Clone the repository
+---
+
+## 🚀 About
+
+This repository powers the official OpenLake website, built with **Next.js**.
+
+It serves as the central hub for:
+- 🌊 OpenLake community
+- 💻 Open-source projects
+- 📚 Learning resources
+- 🎯 Events and initiatives
+- 🤝 Student collaboration
+
+---
+
+## 🛠️ Development
+
+### 1. Clone the repository
+
 ```sh
-git clone --depth 1 https://github.com/hackclub/site.git
+git clone https://github.com/openlake/openlake-website.git
 ```
-> [!NOTE]
-> --depth 1 only gets the latest commit, if you need the full history (unlikely, ~562M), remove the --depth.
 
-2. Install the dependencies
+### 2. Install dependencies
+
 ```sh
 bun install
 ```
 
-3. Then, start the development server:
+### 3. Start the development server
+
 ```sh
 bun dev
 ```
 
-## Credits
+The site will be available at:
 
-Tongyu ([@bucketfish](https://github.com/bucketfish)) made most of the design with help from Rowan ([@3kh0](https://github.com/3kh0)). This is also built with help and feedback from many other Hack Club members! You can join the fun by submitting a pull request!
+```
+http://localhost:3000
+```
+
+---
+
+## 🧰 Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Bun
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from students, developers, designers, and open-source enthusiasts.
+
+If you'd like to contribute:
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a Pull Request
+
+Please keep PRs focused and descriptive.
+
+---
+
+## ❤️ OpenLake
+
+OpenLake is a student-driven open-source community where builders come together to learn, create, and contribute to meaningful projects.
+
+Whether you're writing your first line of code or maintaining production software, there's a place for you here.
+
+---
+
+<p align="center">
+Made with ❤️ by the OpenLake community.
+</p>
