@@ -162,7 +162,6 @@ export function VideoSection() {
               justifyContent: "center",
             }}
           >
-            <EmailSignupInput variant="video" />
           </div>
 
           {/* Italic subtitle */}
