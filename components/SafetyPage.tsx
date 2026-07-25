@@ -5,6 +5,8 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import AIHero from "./safety/AIHero";
 import ResourceSection from "./safety/ResourceSection";
+import { ThemeLock } from "@/components/ThemeToggle";
+
 
 type SafetyCard = {
   title: string;
@@ -29,7 +31,8 @@ const cards: SafetyCard[] = [
 export function SafetyPage() {
   return (
     <main id="main" tabIndex={-1} className="safety-page">
-      <Navbar invertColors />
+      <ThemeLock />
+      <Navbar />
       <AIHero />
       <ResourceSection />
 

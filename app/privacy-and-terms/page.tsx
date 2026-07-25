@@ -5,6 +5,8 @@ import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
 import GameDevHero from "../../components/privacy-and-terms/GameDevHero";
 import ResourceSection from "../../components/privacy-and-terms/ResourceSection";
+import { ThemeLock } from "@/components/ThemeToggle";
+
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Notice & Terms — Hack Club",
@@ -19,6 +21,7 @@ export default function PrivacyAndTermsPage() {
   );
   return (
   <>
+    <ThemeLock />
     <GameDevHero />
     <ResourceSection />
     <MarkdownPage content={content} />

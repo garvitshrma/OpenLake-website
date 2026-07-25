@@ -8,7 +8,8 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const about = [
   { label: "Philosophy", href: "/philosophy" },
-  { label: "Community", href: "/team" },
+  { label: "Present Community", href: "/team" },
+  { label: "Past Community", href: "/past-community" },
   { label: "Newsletter", href: "/newsletterpage" },
 ];
 

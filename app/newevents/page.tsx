@@ -1,10 +1,13 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
+import { ThemeLock } from "@/components/ThemeToggle";
+
 
 export default function EventsPage() {
   return (
     <>
+      <ThemeLock />
       <Navbar />
 
       <main className="min-h-screen bg-[var(--background)]">
@@ -102,7 +105,7 @@ export default function EventsPage() {
                     22 Jan 2026
                   </span>
 
-                  <h3 className="text-3xl font-bold">FOSS OVERFLOW</h3>
+                  <h3 className="text-3xl font-bold text-black">FOSS OVERFLOW</h3>
 
                   <p className="mt-5 leading-8 text-gray-600">
                     OverFlow into Open Source with India's Largest Open Source
@@ -132,7 +135,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     11 Oct 2025
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     Linux Installation Workshop
                   </h3>
 
@@ -162,7 +165,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     29 Aug 2025
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     Git & GitHub Workshop - Beginner Friendly!
                   </h3>
 
@@ -192,7 +195,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     13 Jan 2025
                   </span>
-                  <h3 className="text-3xl font-bold">GSoC : An Introduction</h3>
+                  <h3 className="text-3xl font-bold text-black">GSoC : An Introduction</h3>
 
                   <p className="mt-5 leading-8 text-gray-600">
                     An inspiring and insightful session on Google Summer of Code
@@ -220,7 +223,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     18 Jan 2025
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     Intro to Software Development
                   </h3>
 
@@ -250,7 +253,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     30 Oct 2024
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     A Quick Start to Software Development
                   </h3>
 
@@ -280,7 +283,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     25 June 2023
                   </span>
-                  <h3 className="text-3xl font-bold">How to Open-Source</h3>
+                  <h3 className="text-3xl font-bold text-black">How to Open-Source</h3>
 
                   <p className="mt-5 leading-8 text-gray-600">
                     Open source Tools and Technologies and Open Source
@@ -307,7 +310,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     15 Aug 2022
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     OpenlySourced with Anand Panchbai
                   </h3>
 
@@ -336,7 +339,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     06 Aug 2022
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     Object Oriented Programming and Flask
                   </h3>
 
@@ -366,7 +369,7 @@ export default function EventsPage() {
                   <span className="mb-3 inline-block w-fit rounded-full bg-red-100 px-4 py-1 text-sm font-semibold text-red-600">
                     12 June 2022
                   </span>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-3xl font-bold text-black">
                     HTML & CSS Tutorial + Hackathon
                   </h3>
 
