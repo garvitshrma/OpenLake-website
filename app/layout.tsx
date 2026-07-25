@@ -8,7 +8,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/seo";
 import { phantomSans, zarathustra } from "./fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hackclub.com"),
+  metadataBase: new URL("https://openlake.in"),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
 };
