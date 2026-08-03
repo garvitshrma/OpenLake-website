@@ -497,7 +497,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
               );
             })}
             <a
-              href="https://slack.hackclub.com"
+              href="https://discord.com/invite/A2J9z92qzd"
               className="dark-btn mobile-nav-item"
               onClick={closeMenu}
               style={{
